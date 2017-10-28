@@ -40,6 +40,17 @@ function saveContract(name, value) {
 	context.contracts[name] = value;
 }
 
+function saveInstance(name, contractname, txhash, address) {
+	if (!context.instances)
+		context.instances = {};
+	
+	context.instances[name] = {
+		contract: contractname,
+		tx: txhash,
+		address: address
+	}
+}
+
 function sendTransaction(from, to, value, options, cb) {
     options = options || {};
     
@@ -57,15 +68,61 @@ function sendTransaction(from, to, value, options, cb) {
     host.sendTransaction(txdata, cb);
 }
 
-function createContract(name, owner, value, options, cb) {
+function sendCall(from, to, value, data, options, cb) {
+    options = options || {};
+    
+    var txdata = {
+        from: from,
+		to: to,
+        value: value,
+        gas: options.gas || 21000,
+        gasPrice: options.gasPrice || 1,
+		data: data
+    };
+
+    host.callTransaction(txdata, cb);
+}
+
+function getTransactionReceipt(hash, ntry, cb) {
+	if (ntry <= 0)
+		return cb('transaction ' + hash + 'not mined');
+	
+    host.getTransactionReceiptByHash(hash, function (err, data) {
+        if (err)
+            return cb(err, null);
+            
+        if (data)
+            return cb(null, data);
+            
+        setTimeout(function () {
+            getTransactionReceipt(hash, ntry - 1, cb);
+        }, 1000);
+    });
+}
+
+function createContract(contractname, owner, value, options, cb) {
 	var opts = {};
 	
 	opts.gas = options.gas || 3000000;
-	opts.data = context.contracts[name].bytecode;
+	opts.data = context.contracts[contractname].bytecode;
 	
-	sendTransaction(owner, null, value, opts, cb);
+	var name = options.name || contractname;
+	
+	sendTransaction(owner, null, value, opts, function (err, txhash) {
+		if (err)
+			return cb(err);
+		
+		getTransactionReceipt(txhash, 60, function(err, txr) {
+			if (err)
+				return cb(err);
+			
+			saveInstance(name, contractname, txhash, txr.contractAddress);
+			saveContext(ctxfilename, context);
+			
+			cb(null, name);
+		});
+	});
 }
-
 
 function findImports(path) {
     console.log('Import', path);
@@ -174,9 +231,25 @@ function deploy(args, options, cb) {
 	createContract(args[0], args[1], args[2], options, cb);
 }
 
+function call(args, options, cb) {
+	setHost(options.host);
+	
+	sendCall(args[0], args[1], args[2], options, cb);
+}
+
+function fns(args, options, cb) {
+	var name = args[0];
+	
+	if (!context.contracts[name])
+		return cb('unknown contract: ' + name);
+	
+	cb(null, Object.keys(context.contracts[name].functionHashes));
+}
+
 module.exports = {
 	compile: compile,
 	deploy: deploy,
+	fns: fns,
 	
 	accounts: accounts,
 	balance: balance,

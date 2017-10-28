@@ -16,7 +16,7 @@ contract Counter {
         counter += v;
     }
 	
-    function getCounver() constant returns (uint) {
+    function getCounter() constant returns (uint) {
         return counter;
     }
 }
