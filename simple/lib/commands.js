@@ -1,5 +1,6 @@
 
 var rskapi = require('rskapi');
+var async = require('simpleasync');
 var solc = require('solc');
 
 var fs = require('fs');
@@ -108,10 +109,38 @@ function block(args, options, cb) {
 		host.getBlockByHash(id, cb);
 };
 
+function balance(args, options, cb) {
+	setHost(options.host);
+	
+	var address = args[0];
+	
+	host.getBalance(address, cb);
+}
+
+function balances(args, options, cb) {
+	setHost(options.host);
+	
+	async()
+	.exec(function (next) {
+		host.getAccounts(next);
+	}).map(function (data, next) {
+		host.getBalance(data, function (err, balance) {
+			cb(err, { account: data, balance: balance });
+		});
+	}).then(function (data, next) {
+		cb(null, data);
+	}).error(function (err) {
+		cb(err);
+	});
+}
+
 module.exports = {
 	compile: compile,
 	
 	accounts: accounts,
+	balance: balance,
+	balances: balances,
+	
 	number: number,
 	block: block
 };
