@@ -40,6 +40,33 @@ function saveContract(name, value) {
 	context.contracts[name] = value;
 }
 
+function sendTransaction(from, to, value, options, cb) {
+    options = options || {};
+    
+    var txdata = {
+        from: from,
+		to: to,
+        value: value,
+        gas: options.gas || 21000,
+        gasPrice: options.gasPrice || 1
+    };
+    
+    if (options.data)
+        txdata.data = options.data;
+
+    host.sendTransaction(txdata, cb);
+}
+
+function createContract(name, owner, value, options, cb) {
+	var opts = {};
+	
+	opts.gas = options.gas || 3000000;
+	opts.data = context.contracts[name].bytecode;
+	
+	sendTransaction(owner, null, value, opts, cb);
+}
+
+
 function findImports(path) {
     console.log('Import', path);
     return { contents: fs.readFileSync('./' + path).toString() };
@@ -109,6 +136,13 @@ function block(args, options, cb) {
 		host.getBlockByHash(id, cb);
 };
 
+function blocks(args, options, cb) {
+	setHost(options.host);
+	var id = args[0];
+	
+	host.getBlocksByNumber(parseInt(id), cb);
+};
+
 function balance(args, options, cb) {
 	setHost(options.host);
 	
@@ -134,14 +168,22 @@ function balances(args, options, cb) {
 	});
 }
 
+function deploy(args, options, cb) {
+	setHost(options.host);
+	
+	createContract(args[0], args[1], args[2], options, cb);
+}
+
 module.exports = {
 	compile: compile,
+	deploy: deploy,
 	
 	accounts: accounts,
 	balance: balance,
 	balances: balances,
 	
 	number: number,
-	block: block
+	block: block,
+	blocks: blocks
 };
 
