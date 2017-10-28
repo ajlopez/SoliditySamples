@@ -10,6 +10,15 @@ var host = rskapi.host('http://localhost:4444');
 var ctxfilename = 'context.json';
 var context = loadContext(ctxfilename);
 
+function setHost(url) {
+	if (!url) {
+		if (!host)
+			host = rskapi.host('http://localhost:4444');
+	}
+	else
+		host = rskapi.host(url);
+}
+
 function loadContext(filename) {
 	if (!fs.existsSync(filename))
 		return {};
@@ -64,9 +73,11 @@ function compileContract(filename, name) {
 		}
 }
 
-function compile(args, cb) {
+function compile(args, options, cb) {
 	var filename = path.join('.', 'contracts', args[0]);
 	var name = args[1];
+	
+	setHost(options.host);
 	
 	try {
 		var result = compileContract(filename, name);
@@ -77,15 +88,18 @@ function compile(args, cb) {
 	}
 }
 
-function accounts(args, cb) {
+function accounts(args, options, cb) {
+	setHost(options.host);
 	host.getAccounts(cb);
 }
 
-function number(args, cb) {
+function number(args, options, cb) {
+	setHost(options.host);
 	host.getBlockNumber(cb);
 };
 
-function block(args, cb) {
+function block(args, options, cb) {
+	setHost(options.host);
 	var id = args[0];
 	
 	if (typeof id === 'number' || id.length <= 10)
@@ -101,3 +115,4 @@ module.exports = {
 	number: number,
 	block: block
 };
+
