@@ -27,6 +27,8 @@ contract Types {
     bytes1 onebyte;
     bytes20 twentybytes;
     bytes32 thirtytwobytes;
+    int[10] tenintegers;
+    string[5] fivemessages;
 
     // dynamically-sized arrays
     bytes data;
@@ -34,4 +36,12 @@ contract Types {
 
     // enums
     enum Actions { GoLeft, GoRight, GoStraight, SitStill }
+
+    // dynamic array initialization
+    function f(uint len) {
+        uint[] memory a = new uint[](7);
+        bytes memory b = new bytes(len);
+        // Here we have a.length == 7 and b.length == len
+        a[6] = 8;
+    }
 }
