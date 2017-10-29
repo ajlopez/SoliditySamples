@@ -47,6 +47,19 @@ function flushHostContext(filename, ctx) {
 	saveContext(filename, ctx);
 }
 
+function toNumber(obj) {
+	if (obj == null)
+		return null;
+	
+	if (typeof obj === 'number')
+		return obj;
+	
+	if (typeof obj === 'string' && obj.length < 16)
+		return parseInt(obj);
+	
+	return obj;
+}
+
 function asNumber(obj) {
 	if (typeof obj === 'number')
 		return obj;
@@ -103,6 +116,10 @@ function getInstance(name) {
 	return context.instances[name];
 }
 
+function unlockAccount(addr, cb) {
+	host.unlockPersonalAccount(addr, 'passphrase', 1000, cb);
+}
+
 function sendTransaction(from, to, value, options, cb) {
     options = options || {};
 	var fromaddr;
@@ -118,7 +135,9 @@ function sendTransaction(from, to, value, options, cb) {
 	})
 	.then(function (addr, next) {
 		toaddr = addr;
-		
+		unlockAccount(fromaddr, next);
+	})
+	.then(function (data, next) {
 		var txdata = {
 			from: fromaddr,
 			to: toaddr,
@@ -283,11 +302,18 @@ function balance(args, options, cb) {
 	
 	var address = args[0];
 	
-	getAccountAddress(address, function (err, address) {
-		if (err)
-			return cb(err);
-		
-		host.getBalance(address, cb);
+	async()
+	.exec(function (next) {
+		getAccountAddress(address, next);
+	})
+	.then(function (addr, next) {
+		host.getBalance(addr, next);
+	})
+	.then(function (balance, next) {
+		cb(null, toNumber(balance));
+	})
+	.error(function (err) {
+		cb(err);
 	});
 }
 
@@ -335,8 +361,22 @@ function transfer(args, options, cb) {
 	var from = args[0];
 	var to = args[1];
 	var value = args[2];
+	var tx;
 	
-	sendTransaction(from, to, value, options, cb);
+	async()
+	.exec(function (next) {
+		sendTransaction(from, to, value, options, next);
+	})
+	.then(function (txhash, next) {
+		tx = txhash;
+		getTransactionReceipt(txhash, 60, next);
+	})
+	.then(function (txr, next) {
+		cb(null, tx);
+	})
+	.error(function (err) {
+		cb(err);
+	});
 }
 
 function instance(args, options, cb) {
