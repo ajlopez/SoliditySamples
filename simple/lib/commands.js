@@ -11,13 +11,18 @@ var host = rskapi.host('http://localhost:4444');
 var ctxfilename = 'context.json';
 var context = loadContext(ctxfilename);
 
+function switchToHost(h) {
+	host = h;
+	flushHostContext(ctxfilename, context);
+}
+
 function setHost(url) {
 	if (!url) {
 		if (!host)
-			host = rskapi.host('http://localhost:4444');
+			switchToHost(rskapi.host('http://localhost:4444'));
 	}
 	else
-		host = rskapi.host(url);
+		switchToHost(rskapi.host(url));
 }
 
 function loadContext(filename) {
@@ -31,6 +36,46 @@ function saveContext(filename, ctx) {
 	var text = JSON.stringify(ctx);
 	
 	fs.writeFileSync(filename, text);
+}
+
+function flushHostContext(filename, ctx) {
+	if (!ctx.addresses)
+		return;
+	
+	delete ctx.addresses;
+	
+	saveContext(filename, ctx);
+}
+
+function asNumber(obj) {
+	if (typeof obj === 'number')
+		return obj;
+	
+	if (typeof obj === 'string' && obj.length <= 10)
+		return parseInt(obj);
+	
+	return null;
+}
+
+function getAccountAddress(acc, cb) {
+	if (acc == null)
+		return cb(null, null);
+	
+	host.getAccounts(function (err, accounts) {
+		if (err)
+			return cb(err);
+		
+		cb(null, getAccount(accounts));
+	});
+
+	function getAccount(accounts) {
+		var n = asNumber(acc);
+		
+		if (n == null)
+			return acc;
+		
+		return accounts[n];
+	}	
 }
 
 function saveContract(name, value) {
@@ -53,19 +98,36 @@ function saveInstance(name, contractname, txhash, address) {
 
 function sendTransaction(from, to, value, options, cb) {
     options = options || {};
-    
-    var txdata = {
-        from: from,
-		to: to,
-        value: value,
-        gas: options.gas || 21000,
-        gasPrice: options.gasPrice || 1
-    };
-    
-    if (options.data)
-        txdata.data = options.data;
+	var fromaddr;
+	var toaddr;
+	
+	async()
+	.exec(function (next) {
+		getAccountAddress(from, next);
+	})
+	.then(function (addr, next) {
+		fromaddr = addr;
+		getAccountAddress(to, next);
+	})
+	.then(function (addr, next) {
+		toaddr = addr;
+		
+		var txdata = {
+			from: fromaddr,
+			to: toaddr,
+			value: value,
+			gas: options.gas || 21000,
+			gasPrice: options.gasPrice || 1
+		};
+		
+		if (options.data)
+			txdata.data = options.data;
 
-    host.sendTransaction(txdata, cb);
+		host.sendTransaction(txdata, cb);
+	})
+	.error(function (err) {
+		cb(err);
+	});
 }
 
 function sendCall(from, to, value, data, options, cb) {
@@ -173,6 +235,11 @@ function compile(args, options, cb) {
 	}
 }
 
+function account(args, options, cb) {
+	setHost(options.host);
+	getAccountAddress(args[0], cb);
+}
+
 function accounts(args, options, cb) {
 	setHost(options.host);
 	host.getAccounts(cb);
@@ -205,7 +272,12 @@ function balance(args, options, cb) {
 	
 	var address = args[0];
 	
-	host.getBalance(address, cb);
+	getAccountAddress(address, function (err, address) {
+		if (err)
+			return cb(err);
+		
+		host.getBalance(address, cb);
+	});
 }
 
 function balances(args, options, cb) {
@@ -251,6 +323,7 @@ module.exports = {
 	deploy: deploy,
 	fns: fns,
 	
+	account: account,
 	accounts: accounts,
 	balance: balance,
 	balances: balances,

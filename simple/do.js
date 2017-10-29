@@ -15,7 +15,7 @@ var cmdname = process.argv[2];
 
 commands[cmdname](args, options, function (err, data) {
 	if (err)
-		console.log('error', err);
+		console.error('error', err);
 	else
 		console.log(data);
 });
