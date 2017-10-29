@@ -6,7 +6,8 @@ var sargs = require('simpleargs');
 
 sargs
     .define('h', 'host', config.host, 'Host JSON RPC entry point')
-    .define('n', 'name', config.name, 'Name of the new entity');
+    .define('n', 'name', config.name, 'Name of the new entity')
+    .define('g', 'gas', config.name, 'Gas limit to consume');
 
 var options = sargs(process.argv.slice(3));
 

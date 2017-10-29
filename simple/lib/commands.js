@@ -191,7 +191,9 @@ function sendTransaction(from, to, value, options, cb) {
 	})
 	.then(function (addr, next) {
 		toaddr = addr;
-		unlockAccount(fromaddr, next);
+		unlockAccount(fromaddr, function (err, data) {
+			next();
+		});
 	})
 	.then(function (data, next) {
 		var txdata = {
@@ -250,7 +252,7 @@ function sendCallOrInvoke(instancename, from, fnname, fnargs, value, options, cb
 		options.data = data;
 		
 		if (!options.gas)
-			options.gas = 4000000;
+			options.gas = 3000000;
 		
 		if (iscall)
 			return sendRawCall(addr, toaddr, value, data, options, cb);
