@@ -227,13 +227,14 @@ function sendRawCall(from, to, value, data, options, cb) {
     host.callTransaction(txdata, cb);
 }
 
-function sendCall(instancename, from, fnname, fnargs, value, options, cb) {
+function sendCallOrInvoke(instancename, from, fnname, fnargs, value, options, cb, iscall) {
 	var toaddr = getInstanceAddress(instancename);
 	
 	if (!toaddr)
 		return cb(new Error('unknown instance: ' + instancename));
 	
 	var data = toData(getInstanceContract(instancename), fnname, fnargs);
+	var tx;
 	
 	if (!data)
 		return cb(new Error('unknown function: ' + fnname));
@@ -242,10 +243,36 @@ function sendCall(instancename, from, fnname, fnargs, value, options, cb) {
 	.exec(function (next) {
 		getAccountAddress(from, next);
 	})
-	.exec(function (addr, next) {
-		sendRawCall(addr, toaddr, value, data, options, cb);
+	.then(function (addr, next) {
+		if (iscall)
+			return sendRawCall(addr, toaddr, value, data, options, cb);
+		
+		options.data = data;
+		
+		if (!options.gas)
+			options.gas = 4000000;
+		
+		if (iscall)
+			return sendRawCall(addr, toaddr, value, data, options, cb);
+		
+		sendTransaction(addr, toaddr, value, options, next);
+	})
+	.then(function (txhash, next) {
+		tx = txhash;
+		getTransactionReceipt(txhash, 60, next);
+	})
+	.then(function (txr, next) {
+		cb(null, tx);
 	})
 	.error(cb);
+}
+
+function sendCall(instancename, from, fnname, fnargs, value, options, cb) {
+	sendCallOrInvoke(instancename, from, fnname, fnargs, value, options, cb, true)
+}
+
+function sendInvoke(instancename, from, fnname, fnargs, value, options, cb) {
+	sendCallOrInvoke(instancename, from, fnname, fnargs, value, options, cb, false)
 }
 
 function getTransactionReceipt(hash, ntry, cb) {
@@ -294,7 +321,6 @@ function createContract(contractname, owner, value, options, cb) {
 }
 
 function findImports(path) {
-    console.log('Import', path);
     return { contents: fs.readFileSync('./' + path).toString() };
     // return { error: 'File not found' }
 }
@@ -467,12 +493,25 @@ function call(args, options, cb) {
 	sendCall(name, from, fnname, fnargs, value, options, cb);
 }
 
+function invoke(args, options, cb) {
+	setHost(options.host);
+	
+	var name = args[0];
+	var from = args[1];
+	var fnname = args[2];
+	var fnargs = args[3] ? args[3].split(';') : [];
+	var value = args[4] ? toNumber(args[4]) : 0;
+	
+	sendInvoke(name, from, fnname, fnargs, value, options, cb);
+}
+
 module.exports = {
 	compile: compile,
 	deploy: deploy,
 	instance: instance,
 	fns: fns,
 	call: call,
+	invoke: invoke,
 
 	transfer: transfer,
 	
