@@ -239,7 +239,10 @@ function sendCallOrInvoke(instancename, from, fnname, fnargs, value, options, cb
 	var tx;
 	
 	if (!data)
-		return cb(new Error('unknown function: ' + fnname));
+		if (fnname && fnname.startsWith('0x') && fnname.length === 10)
+			data = fnname;
+		else
+			return cb(new Error('unknown function: ' + fnname));
 	
 	async()
 	.exec(function (next) {
