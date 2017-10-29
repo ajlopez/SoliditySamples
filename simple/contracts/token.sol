@@ -4,7 +4,7 @@ contract Token {
 	event Transfer(address sender, address receiver, uint amount);
 
 	/* Initializes contract with initial supply tokens to the creator of the contract */
-    function token() public {
+    function Token() public {
         balances[msg.sender] = 10000;
     }
 

@@ -96,6 +96,13 @@ function saveInstance(name, contractname, txhash, address) {
 	}
 }
 
+function getInstance(name) {
+	if (!context.instances)
+		return null;
+	
+	return context.instances[name];
+}
+
 function sendTransaction(from, to, value, options, cb) {
     options = options || {};
 	var fromaddr;
@@ -169,20 +176,24 @@ function createContract(contractname, owner, value, options, cb) {
 	opts.data = context.contracts[contractname].bytecode;
 	
 	var name = options.name || contractname;
+	var txhash;
 	
-	sendTransaction(owner, null, value, opts, function (err, txhash) {
-		if (err)
-			return cb(err);
+	async()
+	.exec(function (next) {
+		sendTransaction(owner, null, value, opts, next);
+	})
+	.then(function (tx, next) {
+		txhash = tx;
+		getTransactionReceipt(txhash, 60, next);
+	})
+	.then(function (txr, next) {
+		saveInstance(name, contractname, txhash, txr.contractAddress);
+		saveContext(ctxfilename, context);
 		
-		getTransactionReceipt(txhash, 60, function(err, txr) {
-			if (err)
-				return cb(err);
-			
-			saveInstance(name, contractname, txhash, txr.contractAddress);
-			saveContext(ctxfilename, context);
-			
-			cb(null, name);
-		});
+		cb(null, name);		
+	})
+	.error(function (err) {
+		cb(err);
 	});
 }
 
@@ -318,10 +329,28 @@ function fns(args, options, cb) {
 	cb(null, Object.keys(context.contracts[name].functionHashes));
 }
 
+function transfer(args, options, cb) {
+	setHost(options.host);
+	
+	var from = args[0];
+	var to = args[1];
+	var value = args[2];
+	
+	sendTransaction(from, to, value, options, cb);
+}
+
+function instance(args, options, cb) {
+	var name = args[0];
+	cb(null, getInstance(name));
+}
+
 module.exports = {
 	compile: compile,
 	deploy: deploy,
+	instance: instance,
 	fns: fns,
+
+	transfer: transfer,
 	
 	account: account,
 	accounts: accounts,
