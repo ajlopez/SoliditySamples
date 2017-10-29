@@ -109,11 +109,67 @@ function saveInstance(name, contractname, txhash, address) {
 	}
 }
 
+function getInstance(instancename) {
+	if (!instancename)
+		return null;
+	
+	if (!context.instances)
+		return null;
+	
+	if (!context.instances[instancename])
+		return null;
+
+	return context.instances[instancename];
+}
+
+function getContract(contractname) {
+	if (!contractname)
+		return null;
+	
+	if (!context.contracts)
+		return null;
+	
+	if (!context.contracts[contractname])
+		return null;
+	
+	return context.contracts[contractname];
+}
+
+function getInstanceContract(instancename) {
+	var instance = getInstance(instancename);
+	
+	if (!instance)
+		return null;
+	
+	var contract = getContract(instance.contract);
+	
+	if (!contract)
+		return null;
+	
+	return contract;
+}
+
+function getInstanceAddress(instancename) {
+	var instance = getInstance(instancename);
+	
+	if (!instance)
+		return null;
+	
+	if (!instance.address)
+		return null;
+	
+	return instance.address;
+}
+
 function getInstance(name) {
 	if (!context.instances)
 		return null;
 	
 	return context.instances[name];
+}
+
+function toData(contract, fnname, fnargs) {
+	return contract.functionHashes[fnname];
 }
 
 function unlockAccount(addr, cb) {
@@ -156,7 +212,7 @@ function sendTransaction(from, to, value, options, cb) {
 	});
 }
 
-function sendCall(from, to, value, data, options, cb) {
+function sendRawCall(from, to, value, data, options, cb) {
     options = options || {};
     
     var txdata = {
@@ -169,6 +225,27 @@ function sendCall(from, to, value, data, options, cb) {
     };
 
     host.callTransaction(txdata, cb);
+}
+
+function sendCall(instancename, from, fnname, fnargs, value, options, cb) {
+	var toaddr = getInstanceAddress(instancename);
+	
+	if (!toaddr)
+		return cb(new Error('unknown instance: ' + instancename));
+	
+	var data = toData(getInstanceContract(instancename), fnname, fnargs);
+	
+	if (!data)
+		return cb(new Error('unknown function: ' + fnname));
+	
+	async()
+	.exec(function (next) {
+		getAccountAddress(from, next);
+	})
+	.exec(function (addr, next) {
+		sendRawCall(addr, toaddr, value, data, options, cb);
+	})
+	.error(cb);
 }
 
 function getTransactionReceipt(hash, ntry, cb) {
@@ -340,12 +417,6 @@ function deploy(args, options, cb) {
 	createContract(args[0], args[1], args[2], options, cb);
 }
 
-function call(args, options, cb) {
-	setHost(options.host);
-	
-	sendCall(args[0], args[1], args[2], options, cb);
-}
-
 function fns(args, options, cb) {
 	var name = args[0];
 	
@@ -384,11 +455,24 @@ function instance(args, options, cb) {
 	cb(null, getInstance(name));
 }
 
+function call(args, options, cb) {
+	setHost(options.host);
+	
+	var name = args[0];
+	var from = args[1];
+	var fnname = args[2];
+	var fnargs = args[3] ? args[3].split(';') : [];
+	var value = args[4] ? toNumber(args[4]) : 0;
+	
+	sendCall(name, from, fnname, fnargs, value, options, cb);
+}
+
 module.exports = {
 	compile: compile,
 	deploy: deploy,
 	instance: instance,
 	fns: fns,
+	call: call,
 
 	transfer: transfer,
 	
