@@ -44,4 +44,14 @@ contract Types {
         // Here we have a.length == 7 and b.length == len
         a[6] = 8;
     }
+
+    struct Voter {
+        address delegate;
+        bool voted;
+    }
+
+    struct Proposal {
+        bytes32 name;
+        uint voteCount;
+    }
 }

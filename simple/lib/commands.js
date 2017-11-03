@@ -2,7 +2,7 @@
 var rskapi = require('rskapi');
 var async = require('simpleasync');
 var solc = require('solc');
-
+var utils = require('./utils');
 var fs = require('fs');
 var path = require('path');
 
@@ -169,7 +169,7 @@ function getInstance(name) {
 }
 
 function toData(contract, fnname, fnargs) {
-	return contract.functionHashes[fnname];
+	return contract.functionHashes[fnname] + utils.encodeArguments(fnargs);
 }
 
 function unlockAccount(addr, cb) {
@@ -504,7 +504,7 @@ function invoke(args, options, cb) {
 	var name = args[0];
 	var from = args[1];
 	var fnname = args[2];
-	var fnargs = args[3] ? args[3].split(';') : [];
+	var fnargs = args[3] ? args[3].toString().split(';') : [];
 	var value = args[4] ? toNumber(args[4]) : 0;
 	
 	sendInvoke(name, from, fnname, fnargs, value, options, cb);
