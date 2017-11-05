@@ -15,4 +15,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Truffle Framework](http://truffleframework.com/)
 - [OpenZeppelin](https://openzeppelin.org/)
 
+## How to
+
+- [How to initialize an empty array and push items into it?](https://ethereum.stackexchange.com/questions/11533/how-to-initialize-an-empty-array-and-push-items-into-it)
 
