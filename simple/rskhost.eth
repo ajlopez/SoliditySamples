@@ -1,0 +1,6 @@
+
+# use the default entrypoint for RSK node RPC
+host http://localhost:4444
+
+accounts
+dump accounts

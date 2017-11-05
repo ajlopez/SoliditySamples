@@ -110,6 +110,11 @@ function Executor () {
 		});
 	});
 	
+	register('host', function (cmd, next) {
+		host = rskapi.host(expand(cmd.args)[0]);
+		next(null, null);
+	});
+	
 	register('transfer', function (cmd, next) {
 		var host = self.host();
 		var args = expand(cmd.args);
