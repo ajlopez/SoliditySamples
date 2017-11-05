@@ -28,12 +28,12 @@ function Executor () {
 	var contracts = {};
 	
 	register('message', function (cmd, next) {
-		logger.log.apply(null, cmd.args);
+		logger.log.apply(logger, cmd.args);
 		next(null, null);
 	});
 	
 	register('dump', function (cmd, next) {
-		logger.dir.apply(null, [evaluate(cmd.args[0])]);
+		logger.log(evaluate(cmd.args[0]));
 		next(null, null);
 	});
 	
@@ -124,3 +124,4 @@ function createExecutor() {
 module.exports = {
 	executor: createExecutor
 };
+

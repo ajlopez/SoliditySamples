@@ -1,0 +1,22 @@
+
+message compiling empty.sol
+compile ./contracts/empty.sol
+message empty.sol compiled
+
+message its functions
+dump contracts.Empty.functionHashes
+
+message compiling counter.sol
+compile ./contracts/counter.sol
+message counter.sol compiled
+
+message its functions
+dump contracts.Counter.functionHashes
+
+message its interface
+dump contracts.Counter.interface
+
+message its bytecodes
+dump contracts.Counter.bytecode
+
+

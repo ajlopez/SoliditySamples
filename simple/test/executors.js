@@ -32,7 +32,7 @@ exports['execute dump'] = function (test) {
 	test.async();
 	
 	executor.use('logger', {
-		dir: function () {
+		log: function () {
 			test.ok(arguments);
 			test.deepEqual(arguments[0], { name: 'Adam', age: 800 });
 		}
