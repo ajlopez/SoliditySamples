@@ -37,7 +37,14 @@ function Executor () {
 	var value;
 	var host;
 	var contracts = {};
+	var instances = {};
 	var accounts = [];
+	var logging = false;
+	
+	register('logging', function (cmd, next) {
+		logging = evaluate(cmd.args);
+		next(null, null);
+	});
 	
 	register('message', function (cmd, next) {
 		logger.log.apply(logger, expand(cmd.args));
@@ -128,6 +135,54 @@ function Executor () {
 			}
 		});
 	});
+
+	register('deploy', function (cmd, next) {
+		var host = self.host();
+		var args = expand(cmd.args);
+		
+		var from = accounts[0];
+		var to = '0x0';
+		var bytecode = contracts[args[0]].bytecode;
+		
+		var tx;
+		
+		var txdata = {
+			from: from,
+			to: to,
+			value: 0,
+			data: bytecode,
+			gas: 4000000,
+			gasPrice: 0
+		};
+
+		log('transaction data', txdata);
+
+		host.sendTransaction(txdata, function (err, txhash) {
+			if (err)
+				return next(err, null);
+			
+			log('transaction hash', txhash);
+			
+			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+				if (err)
+					return next(err, null);
+			
+				log('transaction receipt', txreceipt);
+				
+				instances[args[1] || args[0]] = {
+					transactionHash: txhash,
+					contractAddress: txreceipt.contractAddress,
+					blockHash: txreceipt.blockHash,
+					blockNumber: parseInt(txreceipt.blockNumber),
+					contractName: args[0]
+				};
+				
+				value = txreceipt.contractAddress;
+				
+				next(null, txreceipt.contractAddress);
+			})
+		});
+	});
 	
 	this.contract = function (name, value) {
 		if (value === undefined)
@@ -199,6 +254,20 @@ function Executor () {
 			return args.map(arg => expand(arg));
 		
 		return args;
+	}
+	
+	function log(message, value) {
+		if (!logging)
+			return;
+		
+		if (value === undefined)
+			return console.log(message);
+		
+		if (typeof value !== 'object')
+			return console.log(message, value);
+		
+		console.log(message);
+		console.dir(value);
 	}
 }
 
