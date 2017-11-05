@@ -320,7 +320,10 @@ function Executor () {
 		return evaluate(expr);
 	}
 	
-	this.host = function () {
+	this.host = function (value) {
+		if (value)
+			host = rskapi.host(value);
+		
 		if (host)
 			return host;
 		

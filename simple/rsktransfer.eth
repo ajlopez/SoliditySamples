@@ -1,0 +1,32 @@
+
+# uncomment to enable logging
+# logging true
+
+# set RSK host
+host "http://localhost:4444"
+
+# retrieve accounts from host
+accounts
+
+assert accounts
+assert accounts.length
+
+message "Fourth account is" accounts[3]
+balance accounts[3]
+message "Its balance is" parseInt(value)
+
+message "Second account is" accounts[1]
+balance accounts[1]
+message "Its balance is" parseInt(value)
+
+message "Transfering..."
+transfer accounts[3] accounts[1] 1000000
+
+message "Fourth account is" accounts[3]
+balance accounts[3]
+message "Its balance is" parseInt(value)
+
+message "Second account is" accounts[1]
+balance accounts[1]
+message "Its balance is" parseInt(value)
+
