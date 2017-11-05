@@ -6,6 +6,8 @@ var simpledsl = require('simpledsl');
 var solc = require('solc');
 var chalk = require('chalk');
 
+var utils = require('./utils');
+
 var DEFAULT_HOST = "http://localhost:8545";
 
 function findImports(path) {
@@ -206,9 +208,14 @@ function Executor () {
 		var host = self.host();
 		var args = cmd.args;
 		
+		var instancename = args[0];
+		var fnname = args[1];
+		
+		var fnargs = expand(args.slice(2));
+		
 		var from = accounts[0];
-		var to = instances[args[0]].contractAddress;
-		var data = contracts[instances[args[0]].contractName].functionHashes[args[1] + '()'];
+		var to = instances[instancename].contractAddress;
+		var data = toData(instancename, fnname, fnargs);
 		
 		var tx;
 		
@@ -239,9 +246,14 @@ function Executor () {
 		var host = self.host();
 		var args = cmd.args;
 		
+		var instancename = args[0];
+		var fnname = args[1];
+		
+		var fnargs = expand(args.slice(2));
+		
 		var from = accounts[0];
-		var to = instances[args[0]].contractAddress;
-		var data = contracts[instances[args[0]].contractName].functionHashes[args[1] + '()'];
+		var to = instances[instancename].contractAddress;
+		var data = toData(instancename, fnname, fnargs);
 		
 		var tx;
 		
@@ -382,6 +394,16 @@ function Executor () {
 		console.dir(value);
 		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].close);
 	}
+	
+	function toData(instancename, fnname, fnargs) {
+		var contract = contracts[instances[instancename].contractName];
+		
+		if (fnname.indexOf('(') < 0)
+			fnname += '()';
+		
+		return contract.functionHashes[fnname] + utils.encodeArguments(fnargs);
+	}
+	
 }
 
 function createExecutor() {

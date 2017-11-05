@@ -29,4 +29,12 @@ message "counter is" value
 
 assert value == 2
 
+invoke counter1 add(uint256) 40
+
+call counter1 getCounter
+
+message "counter is" value
+
+assert value == 42
+
 
