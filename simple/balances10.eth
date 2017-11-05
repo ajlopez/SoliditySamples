@@ -1,0 +1,23 @@
+
+accounts
+
+balance accounts[0]
+message "account" accounts[0] "balance is" value
+balance accounts[1]
+message "account" accounts[1] "balance is" value
+balance accounts[2]
+message "account" accounts[2] "balance is" value
+balance accounts[3]
+message "account" accounts[3] "balance is" value
+balance accounts[4]
+message "account" accounts[4] "balance is" value
+balance accounts[5]
+message "account" accounts[5] "balance is" value
+balance accounts[6]
+message "account" accounts[6] "balance is" value
+balance accounts[7]
+message "account" accounts[7] "balance is" value
+balance accounts[8]
+message "account" accounts[8] "balance is" value
+balance accounts[9]
+message "account" accounts[9] "balance is" value

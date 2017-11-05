@@ -311,6 +311,10 @@ function Executor () {
 		throw new Error('unknown sender');
 	}
 	
+	this.logging = function (value) {
+		logging = value;
+	}
+	
 	this.contract = function (name, value) {
 		if (value === undefined)
 			return contracts[name];

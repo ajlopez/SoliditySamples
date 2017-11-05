@@ -1,0 +1,11 @@
+
+accounts
+
+balance accounts[0]
+message "account" accounts[0] "balance is" value
+balance accounts[1]
+message "account" accounts[1] "balance is" value
+balance accounts[2]
+message "account" accounts[2] "balance is" value
+balance accounts[3]
+message "account" accounts[3] "balance is" value
