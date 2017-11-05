@@ -197,6 +197,79 @@ function Executor () {
 		});
 	});
 	
+	register('call', function (cmd, next) {
+		var host = self.host();
+		var args = expand(cmd.args);
+		
+		var from = accounts[0];
+		var to = instances[args[0]].contractAddress;
+		var data = contracts[instances[args[0]].contractName].functionHashes[args[1] + '()'];
+		
+		var tx;
+		
+		var txdata = {
+			from: from,
+			to: to,
+			value: 0,
+			data: data,
+			gas: 4000000,
+			gasPrice: 0
+		};
+
+		log('transaction data', txdata);
+
+		host.callTransaction(txdata, function (err, result) {
+			if (err)
+				return next(err, null);
+			
+			log('call result', result);
+			
+			value = result;
+			
+			next(null, result);
+		});
+	});
+	
+	register('invoke', function (cmd, next) {
+		var host = self.host();
+		var args = expand(cmd.args);
+		
+		var from = accounts[0];
+		var to = instances[args[0]].contractAddress;
+		var data = contracts[instances[args[0]].contractName].functionHashes[args[1] + '()'];
+		
+		var tx;
+		
+		var txdata = {
+			from: from,
+			to: to,
+			value: 0,
+			data: data,
+			gas: 4000000,
+			gasPrice: 0
+		};
+
+		log('transaction data', txdata);
+
+		host.sendTransaction(txdata, function (err, txhash) {
+			if (err)
+				return next(err, null);
+			
+			log('transaction hash', txhash);
+			
+			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+				if (err)
+					return next(err, null);
+			
+				log('transaction receipt', txreceipt);
+				
+				value = txhash;
+				
+				next(null, txhash);
+			})
+		});
+	});
+
 	this.contract = function (name, value) {
 		if (value === undefined)
 			return contracts[name];
@@ -277,7 +350,7 @@ function Executor () {
 			return console.log(chalk.green(message));
 		
 		if (typeof value !== 'object')
-			return console.log(message, value);
+			return console.log(chalk.green(message), chalk.green(value));
 		
 		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].open);
 		console.log(message);
