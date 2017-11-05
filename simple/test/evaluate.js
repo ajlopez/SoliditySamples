@@ -7,7 +7,6 @@ exports['evaluate true'] = function (test) {
 	test.async();
 	
 	executor.execute('evaluate true', function (err, data) {
-		console.dir(err);
 		test.ok(!err);
 		test.ok(data === true);
 		test.ok(executor.value() === true);
