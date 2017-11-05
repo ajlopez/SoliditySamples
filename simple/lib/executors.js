@@ -2,12 +2,20 @@
 var simpledsl = require('simpledsl');
 
 function Executor () {
+	var self = this;
 	var logger = console;
 	var dsl = simpledsl.dsl({ comment: '#' });
+	var value;
 	
 	register('message', function (cmd, next) {
 		logger.log.apply(null, cmd.args);
 		next(null, null);
+	});
+	
+	register('evaluate', function (cmd, next) {
+		var result = evaluate(cmd.args);
+		self.value(result);
+		next(null, result);
 	});
 	
 	register('assert', function (cmd, next) {
@@ -19,6 +27,13 @@ function Executor () {
 		else
 			next(null, result);
 	});
+	
+	this.value = function (newvalue) {
+		if (newvalue === undefined)
+			return value;
+		else
+			value = newvalue;
+	}
 	
 	this.use = function (name, value) {
 		if (name === 'logger')
@@ -42,6 +57,11 @@ function Executor () {
 				next(ex, null);
 			}
 		});
+	}
+	
+	function evaluate(args) {
+		var expr = args.join(' ');
+		return eval(expr);
 	}
 }
 
