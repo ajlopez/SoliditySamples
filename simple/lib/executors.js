@@ -338,13 +338,33 @@ function Executor () {
 	}
 	
 	function expand(args) {
-		if (typeof args === 'string' && args[0] === '$')
-			return evaluate(args.substring(1));
-		
 		if (Array.isArray(args))
-			return args.map(arg => expand(arg));
+			return normalize(args).map(arg => expand(arg));
 		
-		return args;
+		return evaluate(args);
+	}
+	
+	function normalize(items) {
+		var result = [];
+		var ni = items.length;
+		var instring = false;
+		
+		for (var k = 0; k < ni; k++) {
+			var item = items[k];
+			
+			if (instring)
+				result[result.length - 1] += ' ' + item;
+			else
+				result.push(item);
+			
+			if (item.startsWith('"'))
+				instring = true;
+			
+			if (item.endsWith('"'))
+				instring = false;
+		}
+		
+		return result;
 	}
 	
 	function log(message, value) {

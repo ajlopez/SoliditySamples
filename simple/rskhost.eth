@@ -4,3 +4,12 @@ host http://localhost:4444
 
 accounts
 dump accounts
+
+balance $accounts[0]
+message first account balance is $value
+balance $accounts[1]
+message second account balance is $value
+balance $accounts[2]
+message third account balance is $value
+balance $accounts[3]
+message fourth account balance is $value

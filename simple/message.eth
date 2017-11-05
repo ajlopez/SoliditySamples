@@ -1,3 +1,4 @@
 # a message 
 
-message hello world
+message "hello world"
+

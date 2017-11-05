@@ -20,7 +20,10 @@ exports['execute message'] = function (test) {
 		}
 	}); 
 	
-	executor.execute('message hello world', function (err, data) {
+	executor.execute('message "hello" "world"', function (err, data) {
+		if (err)
+			console.error(err);
+		
 		test.ok(!err);
 		test.ok(!data);
 		test.done();
@@ -38,7 +41,28 @@ exports['execute message with evaluated argument'] = function (test) {
 		}
 	}); 
 	
-	executor.execute('message $1+2', function (err, data) {
+	executor.execute('message 1+2', function (err, data) {
+		if (err)
+			console.error(err);
+		
+		test.ok(!err);
+		test.ok(!data);
+		test.done();
+	});
+};
+
+exports['execute message with string argument'] = function (test) {
+	var executor = executors.executor();
+	test.async();
+	
+	executor.use('logger', {
+		log: function () {
+			test.ok(arguments);
+			test.equal(arguments[0], "hello");
+		}
+	}); 
+	
+	executor.execute('message "hello"', function (err, data) {
 		if (err)
 			console.error(err);
 		
@@ -76,12 +100,14 @@ exports['execute file with message'] = function (test) {
 	executor.use('logger', {
 		log: function () {
 			test.ok(arguments);
-			test.equal(arguments[0], "hello");
-			test.equal(arguments[1], "world");
+			test.equal(arguments[0], "hello world");
 		}
 	}); 
 	
 	executor.executeFile('./message.eth', function (err, data) {
+		if (err)
+			console.error(err);
+		
 		test.ok(!err);
 		test.ok(!data);
 		test.done();
