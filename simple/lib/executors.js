@@ -5,14 +5,14 @@ function Executor () {
 	var logger = console;
 	var dsl = simpledsl.dsl({ comment: '#' });
 	
-	dsl.register('message', function (cmd, next) {
-		try {
-			logger.log.apply(null, cmd.args);
-			next(null, null);
-		}
-		catch (ex) {
-			next(ex, null);
-		}
+	register('message', function (cmd, next) {
+		logger.log.apply(null, cmd.args);
+		next(null, null);
+	});
+	
+	register('assert', function (cmd, next) {
+		var expr = cmd.args.join(' ');
+		next(null, eval(expr));
 	});
 	
 	this.use = function (name, value) {
@@ -27,6 +27,17 @@ function Executor () {
 	this.executeFile = function (filename, cb) {
 		dsl.executeFile(filename, cb);
 	};
+	
+	function register(name, fn) {
+		dsl.register(name, function (cmd, next) {
+			try {
+				fn(cmd, next);
+			}
+			catch (ex) {
+				next(ex, null);
+			}
+		});
+	}
 }
 
 function createExecutor() {
