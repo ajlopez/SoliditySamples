@@ -2,6 +2,7 @@
 var simpledsl = require('simpledsl');
 
 var fs = require('fs');
+
 var solc = require('solc');
 
 function findImports(path) {
@@ -28,12 +29,12 @@ function Executor () {
 	var contracts = {};
 	
 	register('message', function (cmd, next) {
-		logger.log.apply(logger, cmd.args);
+		logger.log.apply(logger, expand(cmd.args));
 		next(null, null);
 	});
 	
 	register('dump', function (cmd, next) {
-		logger.log(evaluate(cmd.args[0]));
+		logger.log(evaluate(cmd.args));
 		next(null, null);
 	});
 	
@@ -114,6 +115,16 @@ function Executor () {
 			expr = args;
 		
 		return eval(expr);
+	}
+	
+	function expand(args) {
+		if (typeof args === 'string' && args[0] === '$')
+			return evaluate(args.substring(1));
+		
+		if (Array.isArray(args))
+			return args.map(arg => expand(arg));
+		
+		return args;
 	}
 }
 

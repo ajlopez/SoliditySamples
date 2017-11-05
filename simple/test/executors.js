@@ -27,6 +27,27 @@ exports['execute message'] = function (test) {
 	});
 };
 
+exports['execute message with evaluated argument'] = function (test) {
+	var executor = executors.executor();
+	test.async();
+	
+	executor.use('logger', {
+		log: function () {
+			test.ok(arguments);
+			test.equal(arguments[0], 3);
+		}
+	}); 
+	
+	executor.execute('message $1+2', function (err, data) {
+		if (err)
+			console.error(err);
+		
+		test.ok(!err);
+		test.ok(!data);
+		test.done();
+	});
+};
+
 exports['execute dump'] = function (test) {
 	var executor = executors.executor();
 	test.async();
