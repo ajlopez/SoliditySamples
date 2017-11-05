@@ -19,11 +19,10 @@ function Executor () {
 	});
 	
 	register('assert', function (cmd, next) {
-		var expr = cmd.args.join(' ');
-		var result = eval(expr);
+		var result = evaluate(cmd.args);
 		
 		if (!result)
-			throw new Error('failed assertion: ' + expr);
+			throw new Error('failed assertion: ' + cmd.args.join(' '));
 		else
 			next(null, result);
 	});
