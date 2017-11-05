@@ -1,0 +1,7 @@
+
+# retrieve accounts from default host (http://localhost:8545)
+accounts
+
+# dump the accounts addresses
+dump accounts
+

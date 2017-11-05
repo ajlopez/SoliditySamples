@@ -30,6 +30,7 @@ function Executor () {
 	var value;
 	var host;
 	var contracts = {};
+	var accounts = [];
 	
 	register('message', function (cmd, next) {
 		logger.log.apply(logger, expand(cmd.args));
@@ -69,6 +70,17 @@ function Executor () {
 		}
 		
 		next(null, null);
+	});
+	
+	register('accounts', function (cmd, next) {
+		self.host().getAccounts(function (err, data) {
+			if (err)
+				next(err, null);
+			else {
+				accounts = data;
+				next(null, data);
+			}
+		});
 	});
 	
 	this.contract = function (name, value) {
