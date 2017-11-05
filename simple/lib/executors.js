@@ -4,6 +4,7 @@ var fs = require('fs');
 var rskapi = require('rskapi');
 var simpledsl = require('simpledsl');
 var solc = require('solc');
+var chalk = require('chalk');
 
 var DEFAULT_HOST = "http://localhost:8545";
 
@@ -92,6 +93,7 @@ function Executor () {
 				next(err, null);
 			else {
 				accounts = data;
+				log('accounts', data);
 				next(null, data);
 			}
 		});
@@ -125,14 +127,25 @@ function Executor () {
 			gas: 4000000,
 			gasPrice: 0
 		};
+		
+		log('transaction data', txdata);
 
 		host.sendTransaction(txdata, function (err, txhash) {
 			if (err)
-				next(err, null);
-			else {
+				return next(err, null);
+			
+			log('transaction hash', txhash);
+			
+			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+				if (err)
+					return next(err, null);
+			
+				log('transaction receipt', txreceipt);
+				
 				value = txhash;
+				
 				next(null, txhash);
-			}
+			})
 		});
 	});
 
@@ -261,13 +274,15 @@ function Executor () {
 			return;
 		
 		if (value === undefined)
-			return console.log(message);
+			return console.log(chalk.green(message));
 		
 		if (typeof value !== 'object')
 			return console.log(message, value);
 		
+		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].open);
 		console.log(message);
 		console.dir(value);
+		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].close);
 	}
 }
 

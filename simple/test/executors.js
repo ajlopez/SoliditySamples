@@ -81,7 +81,7 @@ exports['execute file with message'] = function (test) {
 		}
 	}); 
 	
-	executor.executeFile('./message.txt', function (err, data) {
+	executor.executeFile('./message.eth', function (err, data) {
 		test.ok(!err);
 		test.ok(!data);
 		test.done();
