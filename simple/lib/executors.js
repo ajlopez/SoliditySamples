@@ -22,6 +22,13 @@ function compileContract(filename) {
 	return output.contracts;
 }
 
+function toNumber(value) {
+	if (typeof value === 'string' && value.startsWith('0x'))
+		return value;
+	
+	return parseInt(value);
+}
+
 function Executor () {
 	var self = this;
 	var logger = console;
@@ -83,6 +90,45 @@ function Executor () {
 		});
 	});
 	
+	register('balance', function (cmd, next) {
+		self.host().getBalance(expand(cmd.args)[0], function (err, data) {
+			if (err)
+				next(err, null);
+			else {
+				value = data;
+				next(null, data);
+			}
+		});
+	});
+	
+	register('transfer', function (cmd, next) {
+		var host = self.host();
+		var args = expand(cmd.args);
+		
+		var from = args[0];
+		var to = args[1];
+		var value = args[2];
+		
+		var tx;
+		
+		var txdata = {
+			from: from,
+			to: to,
+			value: toNumber(value),
+			gas: 4000000,
+			gasPrice: 0
+		};
+
+		host.sendTransaction(txdata, function (err, txhash) {
+			if (err)
+				next(err, null);
+			else {
+				value = txhash;
+				next(null, txhash);
+			}
+		});
+	});
+	
 	this.contract = function (name, value) {
 		if (value === undefined)
 			return contracts[name];
@@ -109,6 +155,10 @@ function Executor () {
 	this.executeFile = function (filename, cb) {
 		dsl.executeFile(filename, cb);
 	};
+	
+	this.evaluate = function (expr) {
+		return evaluate(expr);
+	}
 	
 	this.host = function () {
 		if (host)
