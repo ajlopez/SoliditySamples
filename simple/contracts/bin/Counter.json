@@ -1,0 +1,22 @@
+{
+    "abi": "[{\"constant\":false,\"inputs\":[{\"name\":\"v\",\"type\":\"uint256\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getCounter\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"increment\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}]",
+    "bytecode": "6060604052341561000f57600080fd5b600160005560e6806100226000396000f30060606040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631003e2d2811460575780638ada066e14606c578063d09de08a14608e575b600080fd5b3415606157600080fd5b606a600435609e565b005b3415607657600080fd5b607c60a9565b60405190815260200160405180910390f35b3415609857600080fd5b606a60af565b600080549091019055565b60005490565b6000805460010190555600a165627a7a7230582011567745ad6a8ba36b4ffa81f97cec67602ab14998106dd2aec821bf71993dcd0029",
+    "functionHashes": {
+        "add(uint256)": "1003e2d2",
+        "getCounter()": "8ada066e",
+        "increment()": "d09de08a"
+    },
+    "gasEstimates": {
+        "creation": [
+            20100,
+            46000
+        ],
+        "external": {
+            "add(uint256)": 20349,
+            "getCounter()": 395,
+            "increment()": 20384
+        },
+        "internal": {}
+    },
+    "runtimeBytecode": "60606040526004361060525763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631003e2d2811460575780638ada066e14606c578063d09de08a14608e575b600080fd5b3415606157600080fd5b606a600435609e565b005b3415607657600080fd5b607c60a9565b60405190815260200160405180910390f35b3415609857600080fd5b606a60af565b600080549091019055565b60005490565b6000805460010190555600a165627a7a7230582011567745ad6a8ba36b4ffa81f97cec67602ab14998106dd2aec821bf71993dcd0029"
+}
