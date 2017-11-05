@@ -1,11 +1,31 @@
 
 var simpledsl = require('simpledsl');
 
+var fs = require('fs');
+var solc = require('solc');
+
+function findImports(path) {
+    return { contents: fs.readFileSync('./' + path).toString() };
+    // return { error: 'File not found' }
+}
+
+function compileContract(filename) {
+    var input = fs.readFileSync(filename).toString();
+    var sources = {};
+    sources[filename] = input;
+	
+    var output = solc.compile({ sources: sources }, 1, findImports); // 1 activates the optimiser
+
+	return output.contracts;
+}
+
 function Executor () {
 	var self = this;
 	var logger = console;
 	var dsl = simpledsl.dsl({ comment: '#' });
+
 	var value;
+	var contracts = {};
 	
 	register('message', function (cmd, next) {
 		logger.log.apply(null, cmd.args);
@@ -26,6 +46,28 @@ function Executor () {
 		else
 			next(null, result);
 	});
+	
+	register('compile', function (cmd, next) {
+		var result = compileContract(cmd.args[0]);
+		
+		for (var n in result) {
+			self.contract(n, result[n]);
+			
+			var p = n.lastIndexOf(':');
+			
+			if (p >= 0)
+				self.contract(n.substring(p + 1), result[n]);
+		}
+		
+		next(null, null);
+	});
+	
+	this.contract = function (name, value) {
+		if (value === undefined)
+			return contracts[name];
+		else
+			contracts[name] = value;
+	}
 	
 	this.value = function (newvalue) {
 		if (newvalue === undefined)
