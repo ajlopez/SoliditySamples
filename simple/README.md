@@ -14,7 +14,7 @@ npm install
 There is a defined DSL (Domain Specific Language) to compile contracts and to send Ethereum commands
 to a node.
 
-Example, to show accounts the `accounts.eth` contains:
+Example, to show accounts the `accounts.eth` text file contains:
 
 ```
 # retrieve accounts from default host (http://localhost:8545)
