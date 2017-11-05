@@ -21,4 +21,16 @@ message "owner balance" value
 
 assert value == 10000
 
+invoke token1 transfer(address,uint256) accounts[1] 100
 
+call token1 balances(address) accounts[0]
+
+message "owner balance" value
+
+assert value == 10000-100
+
+call token1 balances(address) accounts[1]
+
+message "receiver balance" value
+
+assert value == 100
