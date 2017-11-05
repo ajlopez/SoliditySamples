@@ -1,9 +1,11 @@
 
-var simpledsl = require('simpledsl');
-
 var fs = require('fs');
 
+var rskapi = require('rskapi');
+var simpledsl = require('simpledsl');
 var solc = require('solc');
+
+var DEFAULT_HOST = "http://localhost:8545";
 
 function findImports(path) {
     return { contents: fs.readFileSync('./' + path).toString() };
@@ -26,6 +28,7 @@ function Executor () {
 	var dsl = simpledsl.dsl({ comment: '#' });
 
 	var value;
+	var host;
 	var contracts = {};
 	
 	register('message', function (cmd, next) {
@@ -94,6 +97,15 @@ function Executor () {
 	this.executeFile = function (filename, cb) {
 		dsl.executeFile(filename, cb);
 	};
+	
+	this.host = function () {
+		if (host)
+			return host;
+		
+		host = rskapi.host(DEFAULT_HOST);
+		
+		return host;
+	}
 	
 	function register(name, fn) {
 		dsl.register(name, function (cmd, next) {

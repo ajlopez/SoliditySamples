@@ -88,3 +88,12 @@ exports['execute file with message'] = function (test) {
 	});
 };
 
+exports['execute host'] = function (test) {
+	var executor = executors.executor();
+	
+	var host = executor.host();
+	
+	test.ok(host);
+	test.equal(typeof host, 'object');
+}
+
