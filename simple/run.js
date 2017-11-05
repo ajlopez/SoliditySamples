@@ -7,13 +7,17 @@ var config = require('./config.json');
 var sargs = require('simpleargs');
 
 sargs
-    .define('h', 'host', config.host, 'Host JSON RPC entry point');
+    .define('h', 'host', config.host, 'Host JSON RPC entry point')
+    .define('f', 'from', config.from, 'From account address or number');
 
 var options = sargs(process.argv.slice(2));
 var args = options._;
 
 if (options.host)
 	executor.host(options.host);
+
+if (options.from != null)
+	executor.from(options.from);
 	
 function normalize(filename) {
 	var ext = path.extname(filename);
