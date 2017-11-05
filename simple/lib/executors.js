@@ -12,7 +12,12 @@ function Executor () {
 	
 	register('assert', function (cmd, next) {
 		var expr = cmd.args.join(' ');
-		next(null, eval(expr));
+		var result = eval(expr);
+		
+		if (!result)
+			throw new Error('failed assertion: ' + expr);
+		else
+			next(null, result);
 	});
 	
 	this.use = function (name, value) {
