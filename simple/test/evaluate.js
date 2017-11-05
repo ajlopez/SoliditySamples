@@ -66,3 +66,16 @@ exports['evaluate comparison without spaces'] = function (test) {
 		test.done();
 	});
 }
+
+exports['evaluate value'] = function (test) {
+	var executor = executors.executor();
+	
+	test.async();
+	
+	executor.execute(['evaluate 1 + 2', 'evaluate value'], function (err, data) {
+		test.ok(!err);
+		test.ok(data === 3);
+		test.ok(executor.value() === 3);
+		test.done();
+	});
+}
