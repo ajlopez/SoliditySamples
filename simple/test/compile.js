@@ -6,7 +6,7 @@ exports['compile empty contract'] = function (test) {
 	
 	test.async();
 	
-	executor.execute('compile ./contracts/empty.sol', function (err, data) {
+	executor.execute('compile "./contracts/empty.sol"', function (err, data) {
 		if (err)
 			console.error(err);
 		
@@ -22,7 +22,7 @@ exports['compile two contracts'] = function (test) {
 	
 	test.async();
 	
-	executor.execute('compile ./contracts/foobar.sol', function (err, data) {
+	executor.execute('compile "./contracts/foobar.sol"', function (err, data) {
 		test.ok(!err);
 		test.ok(executor.contract('./contracts/foobar.sol:Foo'));
 		test.ok(executor.contract('Foo'));
