@@ -1,0 +1,46 @@
+
+# uncomment to enable logging
+# logging true
+
+host "http://localhost:4444"
+
+# retrieve accounts to use accounts[3] as default sender
+accounts
+from accounts[3]
+
+message "compiling counter.sol"
+compile "./contracts/counter.sol"
+message "counter.sol compiled"
+
+dump contracts.Counter.functionHashes
+
+logging true
+deploy Counter counter1
+
+message "contract deployed to address" value
+
+assert value
+
+call counter1 getCounter
+
+message "counter is" value
+
+assert value == 1
+
+invoke counter1 increment
+
+call counter1 getCounter
+
+message "counter is" value
+
+assert value == 2
+
+invoke counter1 add(uint256) 40
+
+call counter1 getCounter
+
+message "counter is" value
+
+assert value == 42
+
+

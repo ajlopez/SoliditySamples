@@ -43,6 +43,7 @@ function Executor () {
 	var instances = {};
 	var accounts = [];
 	var logging = false;
+	var from;
 	
 	register('logging', function (cmd, next) {
 		logging = evaluate(cmd.args);
@@ -155,23 +156,28 @@ function Executor () {
 			})
 		});
 	});
+	
+	register('from', function (cmd, next) {
+		from = expand(cmd.args)[0];
+		next(null, null);
+	});
 
 	register('deploy', function (cmd, next) {
 		var host = self.host();
 		var args = cmd.args;
 		
-		var from = accounts[0];
-		var to = '0x0';
+		var fr = from || accounts[0];
+		var to = '0x00';
 		var bytecode = contracts[args[0]].bytecode;
 		
 		var tx;
 		
 		var txdata = {
-			from: from,
-			to: to,
+			from: fr,
+			// to: to,
 			value: 0,
 			data: bytecode,
-			gas: 4000000,
+			gas: 2000000,
 			gasPrice: 0
 		};
 
@@ -183,7 +189,7 @@ function Executor () {
 			
 			log('transaction hash', txhash);
 			
-			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+			getTransactionReceipt(txhash, 60, function (err, txreceipt) {
 				if (err)
 					return next(err, null);
 			
@@ -213,7 +219,7 @@ function Executor () {
 		
 		var fnargs = expand(args.slice(2));
 		
-		var from = accounts[0];
+		var from = from || accounts[0];
 		var to = instances[instancename].contractAddress;
 		var data = toData(instancename, fnname, fnargs);
 		
@@ -276,7 +282,7 @@ function Executor () {
 			
 			log('transaction hash', txhash);
 			
-			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+			getTransactionReceipt(txhash, 60, function (err, txreceipt) {
 				if (err)
 					return next(err, null);
 			
