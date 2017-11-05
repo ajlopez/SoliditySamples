@@ -143,7 +143,7 @@ function Executor () {
 			
 			log('transaction hash', txhash);
 			
-			host.getTransactionReceiptByHash(txhash, function (err, txreceipt) {
+			getTransactionReceipt(txhash, 60, function (err, txreceipt) {
 				if (err)
 					return next(err, null);
 			
@@ -413,6 +413,25 @@ function Executor () {
 		for (var n in contract.functionHashes)
 			if (n.startsWith(fnname + '('))
 				return contract.functionHashes[n];
+	}
+
+	function getTransactionReceipt(hash, ntry, cb) {
+		var host = self.host();
+		
+		if (ntry <= 0)
+			return cb(new Error('transaction ' + hash + ' not mined'));
+		
+		host.getTransactionReceiptByHash(hash, function (err, data) {
+			if (err)
+				return cb(err, null);
+				
+			if (data)
+				return cb(null, data);
+				
+			setTimeout(function () {
+				getTransactionReceipt(hash, ntry - 1, cb);
+			}, 1000);
+		});
 	}
 	
 }
