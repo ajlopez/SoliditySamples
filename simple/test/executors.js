@@ -27,3 +27,22 @@ exports['execute message'] = function (test) {
 	});
 };
 
+exports['execute file with message'] = function (test) {
+	var executor = executors.executor();
+	test.async();
+	
+	executor.use('logger', {
+		log: function () {
+			test.ok(arguments);
+			test.equal(arguments[0], "hello");
+			test.equal(arguments[1], "world");
+		}
+	}); 
+	
+	executor.executeFile('./message.txt', function (err, data) {
+		test.ok(!err);
+		test.ok(!data);
+		test.done();
+	});
+};
+
