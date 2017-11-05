@@ -73,7 +73,7 @@ function Executor () {
 	});
 	
 	register('compile', function (cmd, next) {
-		var result = compileContract(cmd.args[0]);
+		var result = compileContract(expand(cmd.args)[0]);
 		
 		for (var n in result) {
 			self.contract(n, result[n]);
@@ -156,7 +156,7 @@ function Executor () {
 
 	register('deploy', function (cmd, next) {
 		var host = self.host();
-		var args = expand(cmd.args);
+		var args = cmd.args;
 		
 		var from = accounts[0];
 		var to = '0x0';
@@ -204,7 +204,7 @@ function Executor () {
 	
 	register('call', function (cmd, next) {
 		var host = self.host();
-		var args = expand(cmd.args);
+		var args = cmd.args;
 		
 		var from = accounts[0];
 		var to = instances[args[0]].contractAddress;
@@ -237,7 +237,7 @@ function Executor () {
 	
 	register('invoke', function (cmd, next) {
 		var host = self.host();
-		var args = expand(cmd.args);
+		var args = cmd.args;
 		
 		var from = accounts[0];
 		var to = instances[args[0]].contractAddress;

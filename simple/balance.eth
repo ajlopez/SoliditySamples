@@ -5,8 +5,8 @@ accounts
 assert accounts
 assert accounts.length
 
-message First account is $accounts[0]
+message "First account is" accounts[0]
 
-balance $accounts[0]
+balance accounts[0]
 
-message Its balance is $value
+message "Its balance is" value

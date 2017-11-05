@@ -5,19 +5,19 @@
 # retrieve accounts to use accounts[0] as default sender
 accounts
 
-message compiling counter.sol
-compile ./contracts/counter.sol
-message counter.sol compiled
+message "compiling counter.sol"
+compile "./contracts/counter.sol"
+message "counter.sol compiled"
 
 dump contracts.Counter.functionHashes
 
 deploy Counter counter1
 
-message contract deployed to address $value
+message "contract deployed to address" value
 
 call counter1 getCounter
 
-message counter is $value
+message "counter is" value
 
 assert value == 1
 
@@ -25,7 +25,7 @@ invoke counter1 increment
 
 call counter1 getCounter
 
-message counter is $value
+message "counter is" value
 
 assert value == 2
 

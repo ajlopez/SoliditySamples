@@ -1,16 +1,16 @@
 
-message compiling empty.sol
-compile ./contracts/empty.sol
-message empty.sol compiled
+message "compiling empty.sol"
+compile "./contracts/empty.sol"
+message "empty.sol compiled"
 
-message Empty functions
+message "Empty functions"
 dump contracts.Empty.functionHashes
 
 message
 
-message compiling counter.sol
-compile ./contracts/counter.sol
-message counter.sol compiled
+message "compiling counter.sol"
+compile "./contracts/counter.sol"
+message "counter.sol compiled"
 
 # assertions
 assert contracts.Counter
@@ -18,13 +18,13 @@ assert contracts.Counter.interface
 assert contracts.Counter.bytecode
 assert contracts.Counter.runtimeBytecode
 
-message Counter functions
+message "Counter functions"
 dump contracts.Counter.functionHashes
 
-message Counter interface
+message "Counter interface"
 dump contracts.Counter.interface
 
-message Counter bytecodes
+message "Counter bytecodes"
 dump contracts.Counter.bytecode
 
 
