@@ -41,6 +41,19 @@ exports['evaluate comparison'] = function (test) {
 	});
 }
 
+exports['evaluate false comparison'] = function (test) {
+	var executor = executors.executor();
+	
+	test.async();
+	
+	executor.execute('evaluate 1 > 2', function (err, data) {
+		test.ok(!err);
+		test.ok(data === false);
+		test.ok(executor.value() === false);
+		test.done();
+	});
+}
+
 exports['evaluate comparison without spaces'] = function (test) {
 	var executor = executors.executor();
 	
