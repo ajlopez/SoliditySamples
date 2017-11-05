@@ -236,6 +236,8 @@ function Executor () {
 			
 			log('call result', result);
 			
+			result = utils.decodeValue(result);
+			
 			value = result;
 			
 			next(null, result);
@@ -398,10 +400,16 @@ function Executor () {
 	function toData(instancename, fnname, fnargs) {
 		var contract = contracts[instances[instancename].contractName];
 		
-		if (fnname.indexOf('(') < 0)
-			fnname += '()';
+		return toFunctionHash(contract, fnname) + utils.encodeArguments(fnargs);
+	}
+	
+	function toFunctionHash(contract, fnname) {
+		if (contract.functionHashes[fnname])
+			return contract.functionHashes[fnname];
 		
-		return contract.functionHashes[fnname] + utils.encodeArguments(fnargs);
+		for (var n in contract.functionHashes)
+			if (n.startsWith(fnname + '('))
+				return contract.functionHashes[n];
 	}
 	
 }

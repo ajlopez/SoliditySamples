@@ -1,0 +1,29 @@
+
+# uncomment to enable logging
+# logging true
+
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling greeter.sol"
+compile "./contracts/greeter.sol"
+message "greeter.sol compiled"
+
+dump contracts.Greeter.functionHashes
+dump contracts.Greeter.interface
+
+deploy Greeter greeter1
+
+message "contract deployed to address" value
+
+message "retrieving message"
+call greeter1 message
+message "message" value
+
+message "changing message"
+invoke greeter1 setMessage "hello world"
+
+message "retrieving message"
+call greeter1 message
+
+message "message" value
