@@ -166,14 +166,14 @@ function Executor () {
 		var host = self.host();
 		var args = cmd.args;
 		
-		var fr = from || accounts[0];
+		var from = self.from();
 		var to = '0x00';
 		var bytecode = contracts[args[0]].bytecode;
 		
 		var tx;
 		
 		var txdata = {
-			from: fr,
+			from: from,
 			// to: to,
 			value: 0,
 			data: bytecode,
@@ -219,7 +219,7 @@ function Executor () {
 		
 		var fnargs = expand(args.slice(2));
 		
-		var from = from || accounts[0];
+		var from = self.from();
 		var to = instances[instancename].contractAddress;
 		var data = toData(instancename, fnname, fnargs);
 		
@@ -259,7 +259,7 @@ function Executor () {
 		
 		var fnargs = expand(args.slice(2));
 		
-		var from = accounts[0];
+		var from = self.from();
 		var to = instances[instancename].contractAddress;
 		var data = toData(instancename, fnname, fnargs);
 		
@@ -294,7 +294,23 @@ function Executor () {
 			})
 		});
 	});
-
+	
+	this.from = function (value) {
+		if (value != null)
+			return from = value;
+		
+		if (from && accounts && accounts[from])
+			return accounts[from];
+		
+		if (from)
+			return from;
+		
+		if (accounts)
+			return accounts[0];
+		
+		throw new Error('unknown sender');
+	}
+	
 	this.contract = function (name, value) {
 		if (value === undefined)
 			return contracts[name];
