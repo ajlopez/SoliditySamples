@@ -2,8 +2,8 @@
 var simpledsl = require('simpledsl');
 
 function Executor () {
-	var logger = console.log();
-	var dsl = simpledsl.dsl();
+	var logger = console;
+	var dsl = simpledsl.dsl({ comment: '#' });
 	
 	dsl.register('message', function (cmd, next) {
 		try {
@@ -22,7 +22,11 @@ function Executor () {
 	
 	this.execute = function (txt, cb) {
 		dsl.execute(txt, cb);
-	}
+	};
+	
+	this.executeFile = function (filename, cb) {
+		dsl.executeFile(filename, cb);
+	};
 }
 
 function createExecutor() {
