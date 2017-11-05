@@ -1,6 +1,6 @@
 
 # uncomment to enable logging
-logging true
+# logging true
 
 # retrieve accounts from default host (http://localhost:8545)
 accounts
