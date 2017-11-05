@@ -27,6 +27,27 @@ exports['execute message'] = function (test) {
 	});
 };
 
+exports['execute dump'] = function (test) {
+	var executor = executors.executor();
+	test.async();
+	
+	executor.use('logger', {
+		dir: function () {
+			test.ok(arguments);
+			test.deepEqual(arguments[0], { name: 'Adam', age: 800 });
+		}
+	}); 
+	
+	executor.execute(['evaluate new Object({ name: "Adam", age: 800 })', 'dump value'], function (err, data) {
+		if (err)
+			console.error(err);
+		
+		test.ok(!err);
+		test.ok(!data);
+		test.done();
+	});
+};
+
 exports['execute file with message'] = function (test) {
 	var executor = executors.executor();
 	test.async();

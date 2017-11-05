@@ -32,6 +32,11 @@ function Executor () {
 		next(null, null);
 	});
 	
+	register('dump', function (cmd, next) {
+		logger.dir.apply(null, [evaluate(cmd.args[0])]);
+		next(null, null);
+	});
+	
 	register('evaluate', function (cmd, next) {
 		var result = evaluate(cmd.args);
 		self.value(result);
@@ -101,7 +106,13 @@ function Executor () {
 	}
 	
 	function evaluate(args) {
-		var expr = args.join(' ');
+		var expr;
+		
+		if (Array.isArray(args))
+			expr = args.join(' ');
+		else
+			expr = args;
+		
 		return eval(expr);
 	}
 }
