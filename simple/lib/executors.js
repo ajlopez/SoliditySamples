@@ -166,9 +166,13 @@ function Executor () {
 		var host = self.host();
 		var args = cmd.args;
 		
+		var contractname = args[0];
+		var instancename = args[1] || contractname;
+		var contract = contracts[contractname];
+		
 		var from = self.from();
 		var to = '0x00';
-		var bytecode = contracts[args[0]].bytecode;
+		var bytecode = contract.bytecode;
 		
 		var tx;
 		
@@ -195,7 +199,7 @@ function Executor () {
 			
 				log('transaction receipt', txreceipt);
 				
-				instances[args[1] || args[0]] = {
+				instances[instancename] = {
 					transactionHash: txhash,
 					contractAddress: txreceipt.contractAddress,
 					blockHash: txreceipt.blockHash,
