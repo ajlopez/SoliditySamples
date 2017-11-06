@@ -1,4 +1,30 @@
-# a message 
 
-message "hello world"
 
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling message.sol"
+compile "./contracts/message.sol"
+message "message.sol compiled"
+
+# dump contracts.Message.functionHashes
+dump contracts.Message.interface
+
+deploy Message message1 "hello"
+
+message "contract deployed to address" value
+
+message "retrieving message"
+call message1 message
+message "message" value
+assert value === "hello"
+
+message "changing message"
+invoke message1 setMessage "Hello, World"
+
+message "retrieving message"
+call message1 message
+
+message "message" value
+
+assert value === "Hello, World"
