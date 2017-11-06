@@ -219,13 +219,17 @@ function Executor () {
 		var args = cmd.args;
 		
 		var instancename = args[0];
+		var instance = instances[instancename];
+		var contractname = instance.contractName;
+		var contract = contracts[contractname];
+
 		var fnname = args[1];
 		
 		var fnargs = expand(args.slice(2));
 		
 		var from = self.from();
-		var to = instances[instancename].contractAddress;
-		var data = toData(instancename, fnname, fnargs);
+		var to = instance.contractAddress;
+		var data = toData(contract, fnname, fnargs);
 		
 		var tx;
 		
@@ -259,13 +263,17 @@ function Executor () {
 		var args = cmd.args;
 		
 		var instancename = args[0];
+		var instance = instances[instancename];
+		var contractname = instance.contractName;
+		var contract = contracts[contractname];
+
 		var fnname = args[1];
 		
 		var fnargs = expand(args.slice(2));
 		
 		var from = self.from();
-		var to = instances[instancename].contractAddress;
-		var data = toData(instancename, fnname, fnargs);
+		var to = instance.contractAddress;
+		var data = toData(contract, fnname, fnargs);
 		
 		var tx;
 		
@@ -430,9 +438,7 @@ function Executor () {
 		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].close);
 	}
 	
-	function toData(instancename, fnname, fnargs) {
-		var contract = contracts[instances[instancename].contractName];
-		
+	function toData(contract, fnname, fnargs) {
 		return toFunctionHash(contract, fnname) + utils.encodeArguments(fnargs);
 	}
 	
