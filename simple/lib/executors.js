@@ -173,6 +173,9 @@ function Executor () {
 		var from = self.from();
 		var to = '0x00';
 		var bytecode = contract.bytecode;
+
+		var fnargs = expand(args.slice(2));
+		var data = bytecode + toData(contract, null, fnargs);
 		
 		var tx;
 		
@@ -180,7 +183,7 @@ function Executor () {
 			from: from,
 			// to: to,
 			value: 0,
-			data: bytecode,
+			data: data,
 			gas: 2000000,
 			gasPrice: 0
 		};
@@ -439,6 +442,9 @@ function Executor () {
 	}
 	
 	function toData(contract, fnname, fnargs) {
+		if (!fnname)
+			return utils.encodeArguments(fnargs);
+		
 		return toFunctionHash(contract, fnname) + utils.encodeArguments(fnargs);
 	}
 	
