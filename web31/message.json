@@ -1,0 +1,2 @@
+[{"constant":false,"inputs":[{"name":"msg","type":"string"}],"name":"setMessage","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"message","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"inputs":[{"name":"msg","type":"string"}],"type":"constructor"}]
+

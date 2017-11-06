@@ -1,0 +1,2 @@
+[{"constant":false,"inputs":[{"name":"v","type":"uint256"}],"name":"add","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getCounter","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"increment","outputs":[],"payable":false,"type":"function"},{"inputs":[],"type":"constructor"}]
+
