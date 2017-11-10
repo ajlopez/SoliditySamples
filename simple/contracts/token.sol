@@ -1,3 +1,5 @@
+pragma solidity ^0.4.18;
+
 contract Token { 
     mapping (address => uint) public balances;
     
@@ -9,7 +11,7 @@ contract Token {
     }
 
 	/* Very simple transfer function */
-    function transfer(address receiver, uint amount) returns(bool sufficient) {
+    function transfer(address receiver, uint amount) public returns(bool sufficient) {
         if (balances[msg.sender] < amount) 
 			return false;
         

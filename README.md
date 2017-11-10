@@ -31,8 +31,16 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [How to initialize an empty array and push items into it?](https://ethereum.stackexchange.com/questions/11533/how-to-initialize-an-empty-array-and-push-items-into-it)
 - [What is the memory keyword? What does it do?](https://solidity.readthedocs.io/en/latest/frequently-asked-questions.html#what-is-the-memory-keyword-what-does-it-do)
 - [A curated list of awesome Solidity resources, libraries, tools and more](https://github.com/bkrem/awesome-solidity)
+- [Solidity REPL](https://github.com/raineorshine/solidity-repl)
+- [Remix](https://remix.ethereum.org/#version=soljson-v0.4.18+commit.9cf6e910.js)
 
 ## Web3JS
 
 - [Documentation](http://web3js.readthedocs.io/en/1.0/)
 - [New Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract)
+
+
+## Explores
+
+- [Etherparty Explorer](https://github.com/etherparty/explorer)
+
