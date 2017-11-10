@@ -1,0 +1,11 @@
+
+accounts
+
+message "compiling creator.sol"
+compile "./contracts/creator.sol"
+message "creator.sol compiled"
+
+deploy Creator creator1
+
+message "contract deployed to address" value
+

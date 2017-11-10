@@ -33,14 +33,18 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A curated list of awesome Solidity resources, libraries, tools and more](https://github.com/bkrem/awesome-solidity)
 - [Solidity REPL](https://github.com/raineorshine/solidity-repl)
 - [Remix](https://remix.ethereum.org/#version=soljson-v0.4.18+commit.9cf6e910.js)
+- [Interaction between Contracts](Interactions Between Contracts)
 
 ## Web3JS
 
 - [Documentation](http://web3js.readthedocs.io/en/1.0/)
 - [New Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract)
 
+## Dapps
 
-## Explores
+- [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
+
+## Explorers
 
 - [Etherparty Explorer](https://github.com/etherparty/explorer)
 
