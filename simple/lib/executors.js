@@ -113,6 +113,21 @@ function Executor () {
 		});
 	});
 	
+	register('unlock', function (cmd, next) {
+		var args = expand(cmd.args);
+
+		log('unlock account', args[0]);
+	
+		self.host().unlockPersonalAccount(args[0], args[1], args[2], function (err, data) {
+			if (err)
+				next(err, null);
+			else {
+				value = data;
+				next(null, data);
+			}
+		});
+	});
+	
 	register('host', function (cmd, next) {
 		host = rskapi.host(expand(cmd.args)[0]);
 		next(null, null);
