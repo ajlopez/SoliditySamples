@@ -12,3 +12,9 @@ truffle deploy
 npm run build
 npm run dev
 ```
+
+It was tested using Truffle v3.4.9
+
+
+
+
