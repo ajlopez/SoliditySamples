@@ -40,6 +40,14 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Documentation](http://web3js.readthedocs.io/en/1.0/)
 - [New Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract)
 
+## Truffle
+
+- [Truffle Framework](http://truffleframework.com)
+- [Truffle Tutorials](http://truffleframework.com/tutorials)
+- [PetShop Tutorial](http://truffleframework.com/tutorials/pet-shop)
+- [Building Robust Smart Contracts with OpenZeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin)
+- [Truffle Boxes](http://truffleframework.com/boxes)
+
 ## Dapps
 
 - [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
