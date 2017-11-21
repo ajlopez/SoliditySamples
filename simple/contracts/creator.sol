@@ -1,3 +1,4 @@
+
 contract Counter {
     event Incremented(bool indexed odd, uint x);
 	event Created(uint x);

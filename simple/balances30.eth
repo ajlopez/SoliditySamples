@@ -1,0 +1,63 @@
+
+accounts
+
+balance accounts[0]
+message "account" accounts[0] "balance is" value
+balance accounts[1]
+message "account" accounts[1] "balance is" value
+balance accounts[2]
+message "account" accounts[2] "balance is" value
+balance accounts[3]
+message "account" accounts[3] "balance is" value
+balance accounts[4]
+message "account" accounts[4] "balance is" value
+balance accounts[5]
+message "account" accounts[5] "balance is" value
+balance accounts[6]
+message "account" accounts[6] "balance is" value
+balance accounts[7]
+message "account" accounts[7] "balance is" value
+balance accounts[8]
+message "account" accounts[8] "balance is" value
+balance accounts[9]
+message "account" accounts[9] "balance is" value
+balance accounts[10]
+message "account" accounts[10] "balance is" value
+balance accounts[11]
+message "account" accounts[11] "balance is" value
+balance accounts[12]
+message "account" accounts[12] "balance is" value
+balance accounts[13]
+message "account" accounts[13] "balance is" value
+balance accounts[14]
+message "account" accounts[14] "balance is" value
+balance accounts[15]
+message "account" accounts[15] "balance is" value
+balance accounts[16]
+message "account" accounts[16] "balance is" value
+balance accounts[17]
+message "account" accounts[17] "balance is" value
+balance accounts[18]
+message "account" accounts[18] "balance is" value
+balance accounts[19]
+message "account" accounts[19] "balance is" value
+balance accounts[20]
+message "account" accounts[20] "balance is" value
+balance accounts[21]
+message "account" accounts[21] "balance is" value
+balance accounts[22]
+message "account" accounts[22] "balance is" value
+balance accounts[23]
+message "account" accounts[23] "balance is" value
+balance accounts[24]
+message "account" accounts[24] "balance is" value
+balance accounts[25]
+message "account" accounts[25] "balance is" value
+balance accounts[26]
+message "account" accounts[26] "balance is" value
+balance accounts[27]
+message "account" accounts[27] "balance is" value
+balance accounts[28]
+message "account" accounts[28] "balance is" value
+balance accounts[29]
+message "account" accounts[29] "balance is" value
