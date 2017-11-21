@@ -33,7 +33,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A curated list of awesome Solidity resources, libraries, tools and more](https://github.com/bkrem/awesome-solidity)
 - [Solidity REPL](https://github.com/raineorshine/solidity-repl)
 - [Remix](https://remix.ethereum.org/#version=soljson-v0.4.18+commit.9cf6e910.js)
-- [Interaction between Contracts](Interactions Between Contracts)
+- [Interaction between Contracts](https://dappsforbeginners.wordpress.com/tutorials/interactions-between-contracts/)
+- [How can I debug a smart contract?](https://ethereum.stackexchange.com/questions/184/how-can-i-debug-a-smart-contract)
 
 ## Web3JS
 
