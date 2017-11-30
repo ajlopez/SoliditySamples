@@ -11,8 +11,6 @@ message "counter.sol compiled"
 
 dump contracts.Counter.functionHashes
 
-unlock from "passphrase" 3600
-
 deploy Counter counter1
 
 message "contract deployed to address" value
