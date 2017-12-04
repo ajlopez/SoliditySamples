@@ -450,10 +450,8 @@ function Executor () {
 		if (typeof value !== 'object')
 			return console.log(chalk.green(message), chalk.green(value));
 		
-		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].open);
-		console.log(message);
-		console.dir(value);
-		process.stdout.write(chalk.rgb(0, 128, 0)._styles[0].close);
+		console.log(chalk.green(message));
+		console.log(chalk.green(JSON.stringify(value, null, 4)));
 	}
 	
 	function toData(contract, fnname, fnargs) {
