@@ -21,3 +21,6 @@ var contracts = compileContract(process.argv[2]);
 
 console.dir(Object.keys(contracts));
 
+for (var n in contracts) {
+    console.log(contracts[n].interface);
+}
