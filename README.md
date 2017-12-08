@@ -36,6 +36,12 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Interaction between Contracts](https://dappsforbeginners.wordpress.com/tutorials/interactions-between-contracts/)
 - [How can I debug a smart contract?](https://ethereum.stackexchange.com/questions/184/how-can-i-debug-a-smart-contract)
 
+## Contracts
+
+- [CriptoKitties](https://www.cryptokitties.co/)
+- [CriptoKitties White Paper](https://www.dropbox.com/s/a5h3zso545wuqkm/CryptoKitties_WhitePapurr_V2.pdf?dl=0)
+- [How to Code Your Own CryptoKitties-Style Game on Ethereum](https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3)
+
 ## Web3JS
 
 - [Documentation](http://web3js.readthedocs.io/en/1.0/)
