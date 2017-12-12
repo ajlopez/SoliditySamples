@@ -1,0 +1,21 @@
+
+# uncomment to enable logging
+# logging true
+
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling empty.sol"
+compile "./contracts/empty.sol"
+message "empty.sol compiled"
+
+#unlock from "passphrase" 10000
+
+deploy Empty empty1
+
+message "contract deployed to address" value
+
+message "instance empty1 data"
+dump instances.empty1
+
+
