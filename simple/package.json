@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^2.3.0",
-    "rskapi": "0.0.5",
+    "rskapi": "0.0.6",
     "simpleargs": "0.0.3",
     "simpleasync": "0.0.8",
     "simpledsl": "0.0.3",
