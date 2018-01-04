@@ -38,6 +38,9 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Remix](https://remix.ethereum.org/#version=soljson-v0.4.18+commit.9cf6e910.js)
 - [Interaction between Contracts](https://dappsforbeginners.wordpress.com/tutorials/interactions-between-contracts/)
 - [How can I debug a smart contract?](https://ethereum.stackexchange.com/questions/184/how-can-i-debug-a-smart-contract)
+- [Doxity Documentation Generator for Solidity](https://github.com/DigixGlobal/doxity)
+- [Solidity doc generator](https://github.com/vitiko/solidity-doc)
+- [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
 
 ## Contracts
 
