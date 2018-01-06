@@ -53,6 +53,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 - [Documentation](http://web3js.readthedocs.io/en/1.0/)
 - [New Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract)
+- [Calling your first Smart Contract function with Web3 and Angular5](https://blog.fundrequest.io/calling-your-first-smart-contract-function-with-web3-and-angular5-aa1bde26a55c)
 
 ## Truffle
 
