@@ -24,6 +24,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A Gentle Introduction to Ethereum Programming, Part 1](https://blog.zeppelin.solutions/a-gentle-introduction-to-ethereum-programming-part-1-783cc7796094)
 - [A Gentle Introduction to Ethereum Programming, Part 2](https://blog.zeppelin.solutions/a-gentle-introduction-to-ethereum-programming-part-2-7bbf15e1a953)
 - [Ethereum Dev Cheatsheet](https://github.com/beether/ethereum-dev-cheatsheet)
+- [CryptoZombies is a free, interactive code school that teaches you to build games on Ethereum](https://cryptozombies.io/)
+- [Beether](http://www.beether.net/)
 
 ## Solidity
 
@@ -38,9 +40,13 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Remix](https://remix.ethereum.org/#version=soljson-v0.4.18+commit.9cf6e910.js)
 - [Interaction between Contracts](https://dappsforbeginners.wordpress.com/tutorials/interactions-between-contracts/)
 - [How can I debug a smart contract?](https://ethereum.stackexchange.com/questions/184/how-can-i-debug-a-smart-contract)
+- [What is the difference between an internal/external and public/private function in solidity?](https://ethereum.stackexchange.com/questions/32353/what-is-the-difference-between-an-internal-external-and-public-private-function)
+- [external vs public best practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
+- [internal keyword in a function definition in Solidity](https://ethereum.stackexchange.com/questions/631/internal-keyword-in-a-function-definition-in-solidity)
 - [Doxity Documentation Generator for Solidity](https://github.com/DigixGlobal/doxity)
 - [Solidity doc generator](https://github.com/vitiko/solidity-doc)
 - [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
+- [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
 
 ## Contracts
 
@@ -48,12 +54,17 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [CriptoKitties White Paper](https://www.dropbox.com/s/a5h3zso545wuqkm/CryptoKitties_WhitePapurr_V2.pdf?dl=0)
 - [How to Code Your Own CryptoKitties-Style Game on Ethereum](https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3)
 - [How to call a contract method using the eth_call JSON-RPC API](https://ethereum.stackexchange.com/questions/3514/how-to-call-a-contract-method-using-the-eth-call-json-rpc-api)
-
+- [Smart Contract Patterns](https://github.com/cjgdev/smart-contract-patterns)
+- [Writing upgradable contracts in Solidity](https://blog.colony.io/writing-upgradeable-contracts-in-solidity-6743f0eecc88)
+	
 ## Web3JS
 
-- [Documentation](http://web3js.readthedocs.io/en/1.0/)
+- [Web3JS 1.x Documentation](http://web3js.readthedocs.io/en/1.0/)
 - [New Contract](https://web3js.readthedocs.io/en/1.0/web3-eth-contract.html#new-contract)
 - [Calling your first Smart Contract function with Web3 and Angular5](https://blog.fundrequest.io/calling-your-first-smart-contract-function-with-web3-and-angular5-aa1bde26a55c)
+- [Web3JS 0.2x Documentation](https://github.com/ethereum/wiki/wiki/JavaScript-API)
+- [03. Web3.js Tutorial - Attach a GUI to your Ethereum Smart Contract](https://www.youtube.com/watch?v=hcTPjpPvas8)
+- [04. Capturing Smart Contract Events in our User Interface (Solidity)](https://www.youtube.com/watch?v=L5Au5DY8eL4)
 
 ## Truffle
 
