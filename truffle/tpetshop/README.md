@@ -6,6 +6,7 @@ Run
 ```
 truffle compile
 truffle deploy
+npm install
 npm run dev
 ```
 
