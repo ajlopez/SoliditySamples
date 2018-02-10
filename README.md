@@ -26,6 +26,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Dev Cheatsheet](https://github.com/beether/ethereum-dev-cheatsheet)
 - [CryptoZombies is a free, interactive code school that teaches you to build games on Ethereum](https://cryptozombies.io/)
 - [Beether](http://www.beether.net/)
+- [Getting started with Ethereum as a developer](https://medium.com/bcgdv-engineering/getting-started-with-ethereum-as-a-developer-af20d78c49f)
+- [Getting Started as an Ethereum Web Developer](https://hackernoon.com/getting-started-as-an-ethereum-web-developer-9a2a4ab47baf)
 
 ## Solidity
 
@@ -56,7 +58,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [How to call a contract method using the eth_call JSON-RPC API](https://ethereum.stackexchange.com/questions/3514/how-to-call-a-contract-method-using-the-eth-call-json-rpc-api)
 - [Smart Contract Patterns](https://github.com/cjgdev/smart-contract-patterns)
 - [Writing upgradable contracts in Solidity](https://blog.colony.io/writing-upgradeable-contracts-in-solidity-6743f0eecc88)
-	
+- [Legal Design Patterns in Smart Contracts](https://medium.com/@billgleim/legal-design-patterns-in-smart-contracts-60916cd9ebd7)	
+
 ## Web3JS
 
 - [Web3JS 1.x Documentation](http://web3js.readthedocs.io/en/1.0/)
@@ -77,6 +80,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 ## Dapps
 
 - [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
+- [Tips and Tricks for Adding Metamask to Your UI](https://hackernoon.com/tips-and-tricks-for-adding-metamask-to-your-ui-32728b437194)
 
 ## Explorers
 
