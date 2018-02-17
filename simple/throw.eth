@@ -1,0 +1,16 @@
+
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling throw.sol"
+compile "./contracts/throw.sol"
+message "throw.sol compiled"
+
+deploy Throw throw1
+
+message "contract deployed to address" value
+
+message "instance throw1 data"
+dump instances.throw1
+
+

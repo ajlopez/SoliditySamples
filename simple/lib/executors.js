@@ -147,7 +147,7 @@ function Executor () {
 			from: from,
 			to: to,
 			value: toNumber(value),
-			gas: 4000000,
+			gas: 3000000,
 			gasPrice: 0
 		};
 		
@@ -256,7 +256,7 @@ function Executor () {
 			to: to,
 			value: 0,
 			data: data,
-			gas: 4000000,
+			gas: 3000000,
 			gasPrice: 0
 		};
 
@@ -300,7 +300,7 @@ function Executor () {
 			to: to,
 			value: 0,
 			data: data,
-			gas: 4000000,
+			gas: 3000000,
 			gasPrice: 0
 		};
 
