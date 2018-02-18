@@ -1,0 +1,68 @@
+
+# retrieve accounts
+
+message "retrieving accounts..."
+accounts
+
+# compile contract
+# (contracts variable has the compiled contract data)
+
+message "compiling contract..."
+compile "./contracts/blockchain.sol"
+
+message "contract function hashes"
+dump contracts.Blockchain.functionHashes
+
+# deploy instances, using default sender: accounts[0], message default value: 0
+# first argument: contract name
+# second argument: new instance name
+
+message "deploy instance..."
+deploy Blockchain blockchain
+
+# show instance address
+# (instances variable has the instances data)
+
+message "new instance" instances.blockchain.address
+
+# the block with hash 0 is not in the blockchain
+
+message "check block with hash" 0
+call blockchain blockInfos(uint256) 0
+
+assert result.length === 3
+assert result[0] == 0
+assert result[1] == 0
+assert result[2] == 0
+
+# add a block
+
+message "adding block with hash 0x0100..."
+invoke blockchain addBlock(uint32,uint256,uint256) 1 0x0100 0
+
+message "check block with hash" 0x0100
+call blockchain blockInfos(uint256) 0x0100
+
+assert result.length === 3
+assert result[0] == 1
+assert result[1] == 0x100
+assert result[2] == 0
+
+message "block info" result
+
+# add orphan block
+
+message "adding orphan block..."
+invoke blockchain addBlock(uint32,uint256,uint256) 3 0x0300 0x0200
+
+message "check block with hash" 0x0300
+call blockchain blockInfos(uint256) 0x0300
+
+assert result.length === 3
+assert result[0] == 0
+assert result[1] == 0
+assert result[2] == 0
+
+message "block does not exist"
+
+message "done"

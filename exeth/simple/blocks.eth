@@ -1,0 +1,17 @@
+
+# get the best block number
+
+blocknumber
+
+set bbnumber result
+
+message "best block number" bbnumber
+
+# retrieve genesis block
+block 0
+dump result
+
+# retrieve best block
+block bbnumber
+dump result
+
