@@ -1,0 +1,17 @@
+
+# retrieve accounts from host
+
+accounts
+
+# retrieve balances
+
+set n 0
+
+while n < accounts.length
+	message "account" accounts[n]
+	balance accounts[n]
+	message "balance" result
+	set n n + 1
+end
+
+

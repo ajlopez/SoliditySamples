@@ -1,0 +1,12 @@
+
+message "compiling counter.sol"
+compile "./contracts/counter.sol"
+message "counter.sol compiled"
+
+# dump contracts.Counter.interface
+# dump contracts.Counter.opcodes
+dump Object.keys(contracts.Counter)
+dump contracts.Counter.assembly
+
+dump contracts.Counter.functionHashes
+

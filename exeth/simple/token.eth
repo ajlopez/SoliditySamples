@@ -1,0 +1,38 @@
+
+# uncomment to enable logging
+# logging true
+
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling token.sol"
+compile "./contracts/token.sol"
+message "token.sol compiled"
+
+dump contracts.Token.functionHashes
+
+deploy Token token1
+
+message "contract deployed to address" result
+
+call token1 balances(address) accounts[0]
+
+message "owner balance" result
+
+assert result == 10000
+
+invoke token1 transfer(address,uint256) accounts[1] 100
+
+call token1 balances(address) accounts[0]
+
+message "owner balance" result
+
+assert result == 10000 - 100
+
+call token1 balances(address) accounts[1]
+
+
+
+message "receiver balance" result
+
+assert result == 100

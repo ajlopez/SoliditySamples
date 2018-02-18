@@ -1,0 +1,29 @@
+
+# uncomment to enable logging
+# logging true
+
+# retrieve accounts from default host (http://localhost:8545)
+accounts
+
+assert accounts
+assert accounts.length
+
+message "First account is" accounts[0]
+balance accounts[0]
+message "Its balance is" parseInt(result)
+
+message "Second account is" accounts[1]
+balance accounts[1]
+message "Its balance is" parseInt(result)
+
+message "Transfering..."
+transfer accounts[0] accounts[1] 1000000
+
+message "First account is" accounts[0]
+balance accounts[0]
+message "Its balance is" parseInt(result)
+
+message "Second account is" accounts[1]
+balance accounts[1]
+message "Its balance is" parseInt(result)
+

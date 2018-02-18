@@ -1,0 +1,19 @@
+
+# uncomment to enable logging
+# logging true
+
+# retrieve accounts to use accounts[0] as default sender
+accounts
+
+message "compiling counter.sol"
+compile "./contracts/counter.sol"
+message "counter.sol compiled"
+
+deploy Counter counter1
+
+message "contract deployed to address" value
+
+message "instance counter1 data"
+dump instances.counter1
+
+

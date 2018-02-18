@@ -1,0 +1,62 @@
+
+# retrieve accounts
+
+message "retrieving accounts..."
+accounts
+
+# compile contract
+# (contracts variable has the compiled contract data)
+
+message "compiling contract..."
+compile "./contracts/counter.sol"
+
+message "contract function hashes"
+dump contracts.Counter.functionHashes
+
+# deploy instances, using default sender: accounts[0], message default result: 0
+# first argument: contract name
+# second argument: new instance name
+
+message "deploy instance..."
+deploy Counter counter
+
+# show instance address
+# (instances variable has the instances data)
+
+message "new instance" instances.counter.address
+
+# get counter
+
+call counter getCounter()
+set counter result
+message "counter" counter
+
+assert counter == 1
+
+# invoke increment (default sender: accounts[0])
+
+message "increment..."
+invoke counter increment()
+
+# get counter
+
+call counter getCounter()
+set counter result
+message "counter" counter
+
+assert counter == 2
+
+# invoke add (default sender: accounts[0])
+
+message "add 40..."
+invoke counter add(uint256) 40
+
+# get counter
+
+call counter getCounter()
+set counter result
+message "counter" counter
+
+assert counter == 42
+
+message "done"
