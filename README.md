@@ -89,6 +89,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 ## Tokens
 
 - [What is An Ethereum Token: The Ultimate Beginner’s Guide](https://blockgeeks.com/guides/ethereum-token/)
+- [ERC20 Token Standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)
 - [ERC20](https://en.wikipedia.org/wiki/ERC20)
 - [Ethereum's ERC-20 Token Standard Has Been Formalized](https://www.coindesk.com/ethereums-erc-20-token-standard-formalized/)
 - [ERC20 Standard Token Explorer](https://etherscan.io/token-search)
