@@ -32,6 +32,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 ## Solidity
 
 - [Documentation](http://solidity.readthedocs.io/en/develop/index.html)
+- [Learning Solidity (videos)](https://www.youtube.com/watch?v=v_hU0jPtLto&list=PL16WqdAj66SCOdL6XIFbke-XQg2GW_Avg&index=1)
 - [Solidity Contracts](http://solidity.readthedocs.io/en/develop/contracts.html)
 - [Application Binary Interface Specification](http://solidity.readthedocs.io/en/develop/abi-spec.html#abi)
 - [Solidity Baby Steps](https://github.com/fivedogit/solidity-baby-steps)
@@ -95,6 +96,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [ERC20 Standard Token Explorer](https://etherscan.io/token-search)
 - [ERC: Non-fungible Token Standard #721](https://github.com/ethereum/EIPs/issues/721)
 - [Ethereum Based Tokens](https://theethereum.wiki/w/index.php/Ethereum_Based_Tokens)
+- [Ethereum smart service payment with tokens](https://medium.com/@jgm.orinoco/ethereum-smart-service-payment-with-tokens-60894a79f75c)
+- [How To Write A Smart-Contract For Your ICO? An Ultimate guide](https://howtotoken.com/ico/how-to-write-a-smart-contract-for-your-ico-an-ultimate-guide/)
 
 ## CryptoKitties
 
