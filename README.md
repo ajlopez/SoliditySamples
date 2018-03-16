@@ -60,6 +60,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Smart Contract Patterns](https://github.com/cjgdev/smart-contract-patterns)
 - [Writing upgradable contracts in Solidity](https://blog.colony.io/writing-upgradeable-contracts-in-solidity-6743f0eecc88)
 - [Legal Design Patterns in Smart Contracts](https://medium.com/@billgleim/legal-design-patterns-in-smart-contracts-60916cd9ebd7)	
+- [Mad blockchain science: A 100% upgradeable contract](https://www.reddit.com/r/ethereum/comments/4kt1zp/mad_blockchain_science_a_100_upgradeable_contract/)
+- [EVM Assembly Tricks](http://www.swende.se/blog/EVM-Assembly-trick.html)
 
 ## Web3JS
 
