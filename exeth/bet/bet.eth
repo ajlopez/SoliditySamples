@@ -1,0 +1,120 @@
+
+# retrieve accounts
+
+message "retrieving accounts..."
+accounts
+
+# compile contract
+# (contracts variable has the compiled contract data)
+
+message "compiling contract..."
+compile "./contracts/bet.sol"
+
+message "contract function hashes"
+dump contracts.Bet.functionHashes
+
+deploy Bet bet
+
+dump instances.bet
+
+message "unknown match amount..."
+
+call bet getMatchAmount(string) "foo"
+assert result == 0
+
+message "OK"
+
+message "first bet..."
+
+set value 1000
+invoke bet bet(string,string) "foo" "bar"
+
+set value 0
+call bet getMatchAmount(string) "foo"
+assert result == 1000
+
+message "OK"
+
+message "second bet..."
+
+set value 2000
+invoke bet bet(string,string) "foo" "bar"
+
+set value 0
+call bet getMatchAmount(string) "foo"
+assert result == 3000
+
+message "OK"
+
+message "third bet with second player..."
+
+set value 4000
+set from accounts[1]
+invoke bet bet(string,string) "foo" "baz"
+
+set value 0
+set from accounts[0]
+call bet getMatchAmount(string) "foo"
+assert result == 7000
+
+message "OK"
+
+message "amount of first player..."
+
+call bet getAddressAmount(address,string) accounts[0] "foo"
+assert result == 3000
+
+message "OK"
+
+message "amount of second player..."
+
+call bet getAddressAmount(address,string) accounts[1] "foo"
+assert result == 4000
+
+message "OK"
+
+message "amount of third player..."
+
+call bet getAddressAmount(address,string) accounts[2] "foo"
+assert result == 0
+
+message "OK"
+
+message "amount of first player in unknown match..."
+
+call bet getAddressAmount(address,string) accounts[0] "unknown"
+assert result == 0
+
+message "OK"
+
+message "amount of match and first result"
+
+call bet getMatchAmount(string,string) "foo" "bar"
+assert result == 3000
+
+message "OK"
+
+message "amount of match and second result"
+
+call bet getMatchAmount(string,string) "foo" "baz"
+assert result == 4000
+
+message "OK"
+
+message "resolve match"
+balance accounts[0]
+message "balance first player before resolve" result
+balance accounts[1]
+message "balance second player before resolve" result
+
+invoke bet resolve(string,string) "foo" "bar"
+
+balance accounts[0]
+message "balance first player after resolve" result
+balance accounts[1]
+message "balance second player after resolve" result
+
+message "OK"
+
+message "done"
+	
