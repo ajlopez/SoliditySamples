@@ -23,6 +23,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A curated list of awesome Ethereum Resources](http://awesome-ethereum.com/)
 - [A Gentle Introduction to Ethereum Programming, Part 1](https://blog.zeppelin.solutions/a-gentle-introduction-to-ethereum-programming-part-1-783cc7796094)
 - [A Gentle Introduction to Ethereum Programming, Part 2](https://blog.zeppelin.solutions/a-gentle-introduction-to-ethereum-programming-part-2-7bbf15e1a953)
+- [A Gentle Introduction to Ethereum Programming, Part 3](https://blog.zeppelin.solutions/a-gentle-introduction-to-ethereum-programming-part-3-abdd9644d0c2)
 - [Ethereum Dev Cheatsheet](https://github.com/beether/ethereum-dev-cheatsheet)
 - [CryptoZombies is a free, interactive code school that teaches you to build games on Ethereum](https://cryptozombies.io/)
 - [Beether](http://www.beether.net/)
