@@ -29,6 +29,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Beether](http://www.beether.net/)
 - [Getting started with Ethereum as a developer](https://medium.com/bcgdv-engineering/getting-started-with-ethereum-as-a-developer-af20d78c49f)
 - [Getting Started as an Ethereum Web Developer](https://hackernoon.com/getting-started-as-an-ethereum-web-developer-9a2a4ab47baf)
+- [A Guide to Gas](https://media.consensys.net/a-guide-to-gas-12b40d03605d)
 
 ## Solidity
 
