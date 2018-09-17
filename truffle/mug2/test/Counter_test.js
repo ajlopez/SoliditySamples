@@ -2,7 +2,7 @@
 const Counter = artifacts.require('./Counter.sol');
 
 contract('Counter', function (accounts) {
-    console.dir(accounts);
+//    console.dir(accounts);
     var counter;
     
     beforeEach(async function() {
