@@ -2,8 +2,10 @@
 const Ballot = artifacts.require('./Ballot');
 
 contract('Ballot', function (accounts) {
+    const voters = [ accounts[0], accounts[1], accounts[2] ];
+    
     beforeEach(async function() {
-        this.ballot = await Ballot.new();
+        this.ballot = await Ballot.new(voters);
     });
     
     it('no votes for proposal', async function () {
@@ -18,6 +20,14 @@ contract('Ballot', function (accounts) {
         const nvotes = await this.ballot.noVotes(1);
         
         assert.equal(nvotes, 1);
+    });
+    
+    it('only voter could vote proposal', async function () {
+        await this.ballot.vote(1, { from: accounts[3] });
+        
+        const nvotes = await this.ballot.noVotes(1);
+        
+        assert.equal(nvotes, 0);
     });
     
     it('repeated vote proposal', async function () {

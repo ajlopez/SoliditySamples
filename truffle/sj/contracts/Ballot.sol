@@ -2,9 +2,20 @@
 pragma solidity ^0.4.24;
 
 contract Ballot {
+    mapping (address => bool) canVote;
     mapping (uint => address[]) votes;
     
-    function vote(uint nproposal) public returns(bool) {
+    modifier onlyVoter() {
+        if (canVote[msg.sender])
+            _;
+    }
+    
+    constructor(address[] _voters) public {
+        for (uint k = 0; k < _voters.length; k++)
+            canVote[_voters[k]] = true;
+    }
+    
+    function vote(uint nproposal) public onlyVoter returns(bool) {
         address[] storage pvotes = votes[nproposal];
         
         for (uint k = 0; k < pvotes.length; k++)
