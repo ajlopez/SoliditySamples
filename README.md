@@ -30,6 +30,12 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Getting started with Ethereum as a developer](https://medium.com/bcgdv-engineering/getting-started-with-ethereum-as-a-developer-af20d78c49f)
 - [Getting Started as an Ethereum Web Developer](https://hackernoon.com/getting-started-as-an-ethereum-web-developer-9a2a4ab47baf)
 - [A Guide to Gas](https://media.consensys.net/a-guide-to-gas-12b40d03605d)
+- [Understanding the ethereum trie](https://easythereentropy.wordpress.com/2014/06/04/understanding-the-ethereum-trie/)
+- [Data structure in Ethereum | Episode 1: Recursive Length Prefix (RLP) Encoding/Decoding](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
+- [Data structure in Ethereum | Episode 1+: Compact (Hex-prefix) encoding](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-compact-hex-prefix-encoding-12558ae02791)
+- [Data structure in Ethereum | Episode 2: Radix trie and Merkle trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-2-radix-trie-and-merkle-trie-d941d0bfd69a)
+- [Data structure in Ethereum | Episode 3: Patricia trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-3-patricia-trie-b7b0ccddd32f)
+- [Data structure in Ethereum | Episode 4: Diving into examples](https://medium.com/coinmonks/data-structure-in-ethereum-episode-4-diving-by-examples-f6a4cbd8c329)
 
 ## Solidity
 
