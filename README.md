@@ -58,6 +58,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity doc generator](https://github.com/vitiko/solidity-doc)
 - [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
 - [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
+- [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
 
 ## Contracts
 
