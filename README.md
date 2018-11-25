@@ -58,7 +58,6 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity doc generator](https://github.com/vitiko/solidity-doc)
 - [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
 - [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
-- [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
 
 ## Contracts
 
@@ -71,6 +70,9 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Legal Design Patterns in Smart Contracts](https://medium.com/@billgleim/legal-design-patterns-in-smart-contracts-60916cd9ebd7)	
 - [Mad blockchain science: A 100% upgradeable contract](https://www.reddit.com/r/ethereum/comments/4kt1zp/mad_blockchain_science_a_100_upgradeable_contract/)
 - [EVM Assembly Tricks](http://www.swende.se/blog/EVM-Assembly-trick.html)
+- [Lottery as a Smart Contract: The Business Logic](https://medium.com/coinmonks/lottery-as-a-smart-contract-the-business-logic-3bd22d3a6c4e)
+- [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
+
 
 ## Web3JS
 
@@ -88,6 +90,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [PetShop Tutorial](http://truffleframework.com/tutorials/pet-shop)
 - [Building Robust Smart Contracts with OpenZeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin)
 - [Truffle Boxes](http://truffleframework.com/boxes)
+- [How Truffle Works Under the Hood](https://medium.com/heartbankacademy/how-truffle-works-under-the-hood-f1ff6add416c)
 
 ## Dapps
 
