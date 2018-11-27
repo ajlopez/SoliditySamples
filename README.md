@@ -36,6 +36,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Data structure in Ethereum | Episode 2: Radix trie and Merkle trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-2-radix-trie-and-merkle-trie-d941d0bfd69a)
 - [Data structure in Ethereum | Episode 3: Patricia trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-3-patricia-trie-b7b0ccddd32f)
 - [Data structure in Ethereum | Episode 4: Diving into examples](https://medium.com/coinmonks/data-structure-in-ethereum-episode-4-diving-by-examples-f6a4cbd8c329)
+- [Ethereum 69: how to set up a fully synced blockchain node in 10 mins](https://medium.freecodecamp.org/ethereum-69-how-to-set-up-a-fully-synced-blockchain-node-in-10-mins-f6318d7aad40)
 
 ## Solidity
 
@@ -91,6 +92,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Building Robust Smart Contracts with OpenZeppelin](http://truffleframework.com/tutorials/robust-smart-contracts-with-openzeppelin)
 - [Truffle Boxes](http://truffleframework.com/boxes)
 - [How Truffle Works Under the Hood](https://medium.com/heartbankacademy/how-truffle-works-under-the-hood-f1ff6add416c)
+- [Debugging Smart Contracts with Truffle Debugger: A Practical Approach](https://medium.com/coinmonks/debugging-smart-contracts-with-truffle-debugger-a-practical-approach-3410e9d20837)
 
 ## Dapps
 
