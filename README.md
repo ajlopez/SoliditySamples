@@ -37,6 +37,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Data structure in Ethereum | Episode 3: Patricia trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-3-patricia-trie-b7b0ccddd32f)
 - [Data structure in Ethereum | Episode 4: Diving into examples](https://medium.com/coinmonks/data-structure-in-ethereum-episode-4-diving-by-examples-f6a4cbd8c329)
 - [Ethereum 69: how to set up a fully synced blockchain node in 10 mins](https://medium.freecodecamp.org/ethereum-69-how-to-set-up-a-fully-synced-blockchain-node-in-10-mins-f6318d7aad40)
+- [State Channels for Dummies: Part 5](https://medium.com/blockchannel/state-channels-for-dummies-part-5-6238f83f8da3)
 
 ## Solidity
 
@@ -98,6 +99,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 - [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
 - [Tips and Tricks for Adding Metamask to Your UI](https://hackernoon.com/tips-and-tricks-for-adding-metamask-to-your-ui-32728b437194)
+- [Dip Dapp Doe?—?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
 
 ## Explorers
 
