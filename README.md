@@ -74,7 +74,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [EVM Assembly Tricks](http://www.swende.se/blog/EVM-Assembly-trick.html)
 - [Lottery as a Smart Contract: The Business Logic](https://medium.com/coinmonks/lottery-as-a-smart-contract-the-business-logic-3bd22d3a6c4e)
 - [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
-
+- [How to Write Upgradeable Smart Contracts with Truffle 5.0 and ZeppelinOS 2.0](https://paulrberg.com/post/2018/12/30/upgradeable-smart-contracts/)
+- [zepcon0 - ZeppelinOS - Upgradeability by Elena Nadolinski](https://www.youtube.com/watch?v=FzmzUHLiutg)
 
 ## Web3JS
 
