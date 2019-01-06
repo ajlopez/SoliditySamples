@@ -38,6 +38,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Data structure in Ethereum | Episode 4: Diving into examples](https://medium.com/coinmonks/data-structure-in-ethereum-episode-4-diving-by-examples-f6a4cbd8c329)
 - [Ethereum 69: how to set up a fully synced blockchain node in 10 mins](https://medium.freecodecamp.org/ethereum-69-how-to-set-up-a-fully-synced-blockchain-node-in-10-mins-f6318d7aad40)
 - [State Channels for Dummies: Part 5](https://medium.com/blockchannel/state-channels-for-dummies-part-5-6238f83f8da3)
+- [Ethereum Explained: Merkle Trees, World State, Transactions, and More](https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/)
 
 ## Solidity
 
@@ -95,6 +96,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Truffle Boxes](http://truffleframework.com/boxes)
 - [How Truffle Works Under the Hood](https://medium.com/heartbankacademy/how-truffle-works-under-the-hood-f1ff6add416c)
 - [Debugging Smart Contracts with Truffle Debugger: A Practical Approach](https://medium.com/coinmonks/debugging-smart-contracts-with-truffle-debugger-a-practical-approach-3410e9d20837)
+- [Unit Testing: Build a Decentralized Domain Name System on Top of Ethereum](https://hack.bg/blog/tutorials/part-two-unit-testing-build-a-decentralized-domain-name-system-ddns-on-top-of-ethereum/)
 
 ## Dapps
 
