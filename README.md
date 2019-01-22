@@ -97,6 +97,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [How Truffle Works Under the Hood](https://medium.com/heartbankacademy/how-truffle-works-under-the-hood-f1ff6add416c)
 - [Debugging Smart Contracts with Truffle Debugger: A Practical Approach](https://medium.com/coinmonks/debugging-smart-contracts-with-truffle-debugger-a-practical-approach-3410e9d20837)
 - [Unit Testing: Build a Decentralized Domain Name System on Top of Ethereum](https://hack.bg/blog/tutorials/part-two-unit-testing-build-a-decentralized-domain-name-system-ddns-on-top-of-ethereum/)
+- [Introduction to the Truffle Suite and Dapp Development Pipeline](https://medium.com/@rossbulat/introduction-to-the-truffle-suite-and-dapp-development-pipeline-1b33bb8228d4)
+- [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
 
 ## Dapps
 
