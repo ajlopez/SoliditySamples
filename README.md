@@ -39,6 +39,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum 69: how to set up a fully synced blockchain node in 10 mins](https://medium.freecodecamp.org/ethereum-69-how-to-set-up-a-fully-synced-blockchain-node-in-10-mins-f6318d7aad40)
 - [State Channels for Dummies: Part 5](https://medium.com/blockchannel/state-channels-for-dummies-part-5-6238f83f8da3)
 - [Ethereum Explained: Merkle Trees, World State, Transactions, and More](https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/)
+- [The 11 Best Sources for Ethereum News and Learning](https://media.consensys.net/the-11-best-sources-for-ethereum-news-and-learning-783ef4803ab0)
 
 ## Solidity
 
