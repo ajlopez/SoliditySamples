@@ -131,3 +131,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Source Code](https://ethfiddle.com/09YbyJRfiI)
 - [Code From EtherScan](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code)
 
+## Zeppelin
+
+- [How to implement ERC20 supply mechanisms](https://forum.zeppelin.solutions/t/how-to-implement-erc20-supply-mechanisms/226)
+
