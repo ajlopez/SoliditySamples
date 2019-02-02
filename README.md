@@ -17,6 +17,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 ## Ethereum
 
+- [The Complete Tutorial On Getting Started With Smart Contracts On Ethereum](https://medium.com/@ricochenx/the-complete-tutorial-on-getting-started-with-smart-contracts-on-ethereum-3ee6c54e84db)
 - [The Hitchhiker’s Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
 - [Programming Ethereum smart contract transactions in JavaScript](https://tokenmarket.net/blog/creating-ethereum-smart-contract-transactions-in-client-side-javascript/)
 - [Ethereum Virtual Machine Awesome List](https://github.com/pirapira/awesome-ethereum-virtual-machine)
@@ -62,11 +63,10 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity doc generator](https://github.com/vitiko/solidity-doc)
 - [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
 - [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
+- [Thinking in Solidity](https://blog.cotten.io/thinking-in-solidity-6670c06390a9)
 
 ## Contracts
 
-- [CriptoKitties](https://www.cryptokitties.co/)
-- [CriptoKitties White Paper](https://www.dropbox.com/s/a5h3zso545wuqkm/CryptoKitties_WhitePapurr_V2.pdf?dl=0)
 - [How to Code Your Own CryptoKitties-Style Game on Ethereum](https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3)
 - [How to call a contract method using the eth_call JSON-RPC API](https://ethereum.stackexchange.com/questions/3514/how-to-call-a-contract-method-using-the-eth-call-json-rpc-api)
 - [Smart Contract Patterns](https://github.com/cjgdev/smart-contract-patterns)
@@ -125,11 +125,14 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 ## CryptoKitties
 
+- [CriptoKitties](https://www.cryptokitties.co/)
+- [CriptoKitties White Paper](https://www.dropbox.com/s/a5h3zso545wuqkm/CryptoKitties_WhitePapurr_V2.pdf?dl=0)
 - [How to Code Your Own CryptoKitties-Style Game on Ethereum](https://medium.com/loom-network/how-to-code-your-own-cryptokitties-style-game-on-ethereum-7c8ac86a4eb3)
 - [CryptoKitties](https://www.cryptokitties.co)
 - [CryptoKitties: Collectible and Breedable Cats Empowered by Blockchain Technology](https://www.dropbox.com/s/a5h3zso545wuqkm/CryptoKitties_WhitePapurr_V2.pdf?dl=0)
 - [Source Code](https://ethfiddle.com/09YbyJRfiI)
 - [Code From EtherScan](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code)
+- [The Inside Story of the CryptoKitties Congestion Crisis](https://media.consensys.net/the-inside-story-of-the-cryptokitties-congestion-crisis-499b35d119cc)
 
 ## Zeppelin
 
