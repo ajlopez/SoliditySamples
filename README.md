@@ -41,6 +41,10 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [State Channels for Dummies: Part 5](https://medium.com/blockchannel/state-channels-for-dummies-part-5-6238f83f8da3)
 - [Ethereum Explained: Merkle Trees, World State, Transactions, and More](https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/)
 - [The 11 Best Sources for Ethereum News and Learning](https://media.consensys.net/the-11-best-sources-for-ethereum-news-and-learning-783ef4803ab0)
+- [Improving Smart Contract development with Tenderly and human readable stack traces](https://medium.com/tenderly/improving-smart-contract-development-with-tenderly-and-human-readable-stack-traces-16abfad5dd15)
+- [Ethereum Under the Hood: Part-1 (ver 0.1)](https://medium.com/coinmonks/ethereum-under-the-hood-part-i-ver-0-1-4f2fb24b3d68)
+- [Ethereum Under the Hood- Part 2 (RLP Encoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-ii-i-933411deebe1)
+- [Ethereum Under The Hood Part 3 (RLP Decoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-c0c07f5c0714)
 
 ## Solidity
 
