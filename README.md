@@ -82,6 +82,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
 - [How to Write Upgradeable Smart Contracts with Truffle 5.0 and ZeppelinOS 2.0](https://paulrberg.com/post/2018/12/30/upgradeable-smart-contracts/)
 - [zepcon0 - ZeppelinOS - Upgradeability by Elena Nadolinski](https://www.youtube.com/watch?v=FzmzUHLiutg)
+- [Smart Contracts: A Simple Guide — Part 1](https://medium.com/@ShapeShift.io/smart-contracts-a-simple-guide-part-1-fa16a6c201c1)
 
 ## Web3JS
 
