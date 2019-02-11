@@ -45,6 +45,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Under the Hood: Part-1 (ver 0.1)](https://medium.com/coinmonks/ethereum-under-the-hood-part-i-ver-0-1-4f2fb24b3d68)
 - [Ethereum Under the Hood- Part 2 (RLP Encoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-ii-i-933411deebe1)
 - [Ethereum Under The Hood Part 3 (RLP Decoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-c0c07f5c0714)
+- [A Guide to Gas](https://media.consensys.net/a-guide-to-gas-12b40d03605d)
 
 ## Solidity
 
