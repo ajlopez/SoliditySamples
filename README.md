@@ -114,6 +114,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
 - [Tips and Tricks for Adding Metamask to Your UI](https://hackernoon.com/tips-and-tricks-for-adding-metamask-to-your-ui-32728b437194)
 - [Dip Dapp Doe?—?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
+- [Introducing ZepKit: the easiest way to start your decentralized application](https://blog.zeppelinos.org/introducing-zepkit/)
 
 ## Explorers
 
