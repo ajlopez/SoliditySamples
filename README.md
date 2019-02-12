@@ -86,6 +86,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [zepcon0 - ZeppelinOS - Upgradeability by Elena Nadolinski](https://www.youtube.com/watch?v=FzmzUHLiutg)
 - [Smart Contracts: A Simple Guide — Part 1](https://medium.com/@ShapeShift.io/smart-contracts-a-simple-guide-part-1-fa16a6c201c1)
 - [Writing Smart Contracts with Solidity > 0.5](https://medium.com/@rossbulat/writing-solidity-0-5-smart-contracts-101-5efd1ee9f53e)
+- [Dapp](https://dapp.tools/dapp/)
 
 ## Web3JS
 
