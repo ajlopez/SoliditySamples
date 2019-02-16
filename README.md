@@ -70,6 +70,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Markdown documentation generator for Solidity](https://github.com/dpilch/solmd)
 - [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
 - [Thinking in Solidity](https://blog.cotten.io/thinking-in-solidity-6670c06390a9)
+- [Solidity tips and tricks to save gas and reduce bytecode size](https://blog.polymath.network/solidity-tips-and-tricks-to-save-gas-and-reduce-bytecode-size-c44580b218e6)
 
 ## Contracts
 
