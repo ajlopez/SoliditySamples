@@ -144,6 +144,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Source Code](https://ethfiddle.com/09YbyJRfiI)
 - [Code From EtherScan](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code)
 - [The Inside Story of the CryptoKitties Congestion Crisis](https://media.consensys.net/the-inside-story-of-the-cryptokitties-congestion-crisis-499b35d119cc)
+- [Hacking the CryptoKitties Genome](https://hackernoon.com/hacking-the-cryptokitties-genome-1cb3e7dddab3)
 
 ## Zeppelin
 
