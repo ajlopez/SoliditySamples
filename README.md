@@ -47,6 +47,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Under The Hood Part 3 (RLP Decoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-c0c07f5c0714)
 - [A Guide to Gas](https://media.consensys.net/a-guide-to-gas-12b40d03605d)
 - [A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974)
+- [Ethereum’s EIP 2/4: 15 Second Block Target](https://blog.cotten.io/ethereums-eip-2-4-15-second-block-target-98d4c11017e1)
 
 ## Solidity
 
