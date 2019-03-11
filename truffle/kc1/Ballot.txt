@@ -1,0 +1,5 @@
+
+Votar por si una propuesta
+Evitar voto doble
+Saber cuantos votos si tiene una propuesta
+Solo un grupo de cuentas pueda votar
