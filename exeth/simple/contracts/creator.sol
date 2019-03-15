@@ -1,34 +1,34 @@
 
 contract Counter {
+    uint x;
+
     event Incremented(bool indexed odd, uint x);
 	event Created(uint x);
 	event Valued(uint x);
 	
-    function Counter() {
+    constructor() public {
         x = 70;
-		Created(x);
+		emit Created(x);
     }
     
-    function increment() {
+    function increment() public {
         ++x;
-        Incremented(x % 2 == 1, x);
+        emit Incremented(x % 2 == 1, x);
     }
 	
-    function getValue() constant returns (uint) {
-		Valued(x);
+    function getValue() public view returns (uint) {
+		// emit Valued(x);
         return x;
     }
-
-    uint x;
 }
 
 contract Creator {
-	Counter counter;
+	Counter public counter;
 	event CounterCreated(uint);
 	
-	function Creator() {
+	constructor() public {
 		counter = new Counter();
-		CounterCreated(counter.getValue());
+		emit CounterCreated(counter.getValue());
 	}
 }
 

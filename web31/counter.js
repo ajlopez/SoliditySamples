@@ -71,6 +71,16 @@ var run = async () => {
         const c2 = await counter.methods.getCounter().call();
         
         console.log('counter', c2);
+        
+        await counter.methods.add(40).send({
+            from: options.from || accounts[0],
+            gas: 3000000,
+            gasPrice: 0
+        });
+        
+        const c3 = await counter.methods.getCounter().call();
+        
+        console.log('counter', c3);
 	})
 	.on('confirmation', function (confirmationNumber, receipt) {
 		console.log('confirmation number', confirmationNumber);

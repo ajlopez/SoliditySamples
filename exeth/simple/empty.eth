@@ -9,8 +9,6 @@ message "compiling empty.sol"
 compile "./contracts/empty.sol"
 message "empty.sol compiled"
 
-#unlock from "passphrase" 10000
-
 deploy Empty empty1
 
 message "contract deployed to address" result

@@ -31,8 +31,10 @@ assert result == 10000 - 100
 
 call token1 balances(address) accounts[1]
 
-
-
 message "receiver balance" result
 
 assert result == 100
+
+message "done"
+
+

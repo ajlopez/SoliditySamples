@@ -50,6 +50,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum’s EIP 2/4: 15 Second Block Target](https://blog.cotten.io/ethereums-eip-2-4-15-second-block-target-98d4c11017e1)
 - [The business of sending transactions on Ethereum](https://medium.com/coinmonks/the-business-of-sending-transactions-on-ethereum-e79fd9a2b88)
 - [EVM Evolution Roadmap](https://medium.com/spadebuilders/evm-evolution-roadmap-f8b8e3a73882)
+- [Ethereum Yellow Paper Walkthrough: Merkle Trees](https://dzone.com/articles/ethereum-yellow-paper-walkthrough-27)
 
 ## Solidity
 

@@ -9,3 +9,9 @@ deploy Creator creator1
 
 message "contract deployed to address" result
 
+call creator1 counter()
+
+set counteraddr result
+
+message "counter contract" counteraddr
+

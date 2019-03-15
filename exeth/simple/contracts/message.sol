@@ -2,11 +2,11 @@
 contract Message {
     string public message;
 
-    function Message(string msg) {
+    constructor(string msg) public {
         message = msg;
     }
     
-    function setMessage(string msg) {
+    function setMessage(string msg) public {
         message = msg;
     }
 }

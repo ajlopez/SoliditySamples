@@ -10,7 +10,7 @@ set n 0
 while n < accounts.length
 	message "account" accounts[n]
 	balance accounts[n]
-	message "balance" result
+	message "balance" parseInt(result)
 	set n n + 1
 end
 

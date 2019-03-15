@@ -1,6 +1,16 @@
 
 const Token = artifacts.require('./Token.sol');
 
+async function expectThrow (promise) {
+  try {
+    await promise;
+  } catch (error) {
+      return;
+  }
+  
+  assert.fail('Expected throw not received');
+}
+
 contract('Token', function (accounts) {
     it('create token with initial balance', async function () {
         var token = await Token.new(10000);
@@ -24,11 +34,7 @@ contract('Token', function (accounts) {
     it('cannot transfer tokens if not enough balance', async function ()  {
         var token = await Token.new(10000);
         
-        try {
-            await token.transfer(accounts[1], 1000, { from: accounts[2] });
-        }
-        catch (ex) {
-        }
+        expectThrow(token.transfer(accounts[1], 1000, { from: accounts[2] }));
         
         const balance = await token.balanceOf(accounts[0]);
         assert.equal(balance, 10000);
@@ -50,11 +56,7 @@ contract('Token', function (accounts) {
     it('not owner cannot emit new tokens', async function ()  {
         var token = await Token.new(10000);
 
-        try {
-            await token.emit(1000, { from: accounts[1] });
-        }
-        catch (ex) {
-        }
+        expectThrow(token.emit(1000, { from: accounts[1] }));
         
         const balance = await token.balanceOf(accounts[0]);
         assert.equal(balance, 10000);

@@ -7,8 +7,8 @@ message "compiling message.sol"
 compile "./contracts/message.sol"
 message "message.sol compiled"
 
-# dump contracts.Message.functionHashes
-dump contracts.Message.interface
+dump contracts.Message.functionHashes
+# dump contracts.Message.interface
 
 deploy Message message1 "hello"
 

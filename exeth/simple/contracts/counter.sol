@@ -1,12 +1,13 @@
 
-// pragma solidity ^0.4.18;
+pragma solidity ^0.4.24;
 
 // Simple counter contract
 
 contract Counter {
     uint counter;
 	
-    function Counter() public {
+    // function Counter() public {
+    constructor() public {
         counter = 1;
     }
     
@@ -18,7 +19,7 @@ contract Counter {
         counter += v;
     }
 	
-    function getCounter() public constant returns (uint) {
+    function getCounter() public view returns (uint) {
         return counter;
     }
 }
