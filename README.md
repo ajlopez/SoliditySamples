@@ -49,6 +49,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974)
 - [Ethereum’s EIP 2/4: 15 Second Block Target](https://blog.cotten.io/ethereums-eip-2-4-15-second-block-target-98d4c11017e1)
 - [The business of sending transactions on Ethereum](https://medium.com/coinmonks/the-business-of-sending-transactions-on-ethereum-e79fd9a2b88)
+- [EVM Evolution Roadmap](https://medium.com/spadebuilders/evm-evolution-roadmap-f8b8e3a73882)
 
 ## Solidity
 
