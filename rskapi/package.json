@@ -1,0 +1,16 @@
+{
+  "name": "rskapi_samples",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ethereumjs-tx": "^1.3.7",
+    "rskapi": "0.0.10"
+  }
+}
