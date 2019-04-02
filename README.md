@@ -75,6 +75,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity Common Patterns](http://solidity.readthedocs.io/en/develop/common-patterns.html)
 - [Thinking in Solidity](https://blog.cotten.io/thinking-in-solidity-6670c06390a9)
 - [Solidity tips and tricks to save gas and reduce bytecode size](https://blog.polymath.network/solidity-tips-and-tricks-to-save-gas-and-reduce-bytecode-size-c44580b218e6)
+- [Solidity CRUD- Epilogue](https://medium.com/robhitchens/solidity-crud-epilogue-e563e794fde)
+- [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
 
 ## Contracts
 
@@ -92,6 +94,13 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Smart Contracts: A Simple Guide — Part 1](https://medium.com/@ShapeShift.io/smart-contracts-a-simple-guide-part-1-fa16a6c201c1)
 - [Writing Smart Contracts with Solidity > 0.5](https://medium.com/@rossbulat/writing-solidity-0-5-smart-contracts-101-5efd1ee9f53e)
 - [Dapp](https://dapp.tools/dapp/)
+- [Compiling and deploying Ethereum Smart Contracts with pure JavaScript](https://medium.com/coinmonks/compiling-and-deploying-ethereum-smart-contracts-with-pure-javascript-4bee3bfe99bb)
+
+## Geth
+
+- [An Introduction to Geth and Running Ethereum Nodes](https://www.sitepoint.com/an-introduction-to-geth-and-running-ethereum-nodes/)
+- [Set up an Ethereum development network in two minutes](https://gist.github.com/evertonfraga/9d65a9f3ea399ac138b3e40641accf23)
+- [Ethereum : How to setup a local test node with initial ether balance using geth](https://medium.com/@chim/ethereum-how-to-setup-a-local-test-node-with-initial-ether-balance-using-geth-974511ce712)
 
 ## Web3JS
 
@@ -113,7 +122,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Debugging Smart Contracts with Truffle Debugger: A Practical Approach](https://medium.com/coinmonks/debugging-smart-contracts-with-truffle-debugger-a-practical-approach-3410e9d20837)
 - [Unit Testing: Build a Decentralized Domain Name System on Top of Ethereum](https://hack.bg/blog/tutorials/part-two-unit-testing-build-a-decentralized-domain-name-system-ddns-on-top-of-ethereum/)
 - [Introduction to the Truffle Suite and Dapp Development Pipeline](https://medium.com/@rossbulat/introduction-to-the-truffle-suite-and-dapp-development-pipeline-1b33bb8228d4)
-- [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
+- [Test Driven Solidity with Truffle](https://medium.com/@yahya_gis/test-driven-solidity-with-truffle-e4beaa2bd194)
+- [Solidity and TDD - How to build a smart contract](https://ilanolkies.com/post/Solidity-and-TDD)
 
 ## Dapps
 
