@@ -95,6 +95,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Writing Smart Contracts with Solidity > 0.5](https://medium.com/@rossbulat/writing-solidity-0-5-smart-contracts-101-5efd1ee9f53e)
 - [Dapp](https://dapp.tools/dapp/)
 - [Compiling and deploying Ethereum Smart Contracts with pure JavaScript](https://medium.com/coinmonks/compiling-and-deploying-ethereum-smart-contracts-with-pure-javascript-4bee3bfe99bb)
+- [Crypto Wars](https://github.com/e11-io/crypto-wars-solidity)
 
 ## Geth
 
