@@ -77,6 +77,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity tips and tricks to save gas and reduce bytecode size](https://blog.polymath.network/solidity-tips-and-tricks-to-save-gas-and-reduce-bytecode-size-c44580b218e6)
 - [Solidity CRUD- Epilogue](https://medium.com/robhitchens/solidity-crud-epilogue-e563e794fde)
 - [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
+- [Solidity Collections](https://github.com/ethereum/wiki/wiki/Solidity-Collections)
 
 ## Contracts
 
