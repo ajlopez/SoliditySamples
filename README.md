@@ -18,6 +18,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 ## Ethereum
 
 - [The Complete Tutorial On Getting Started With Smart Contracts On Ethereum](https://medium.com/@ricochenx/the-complete-tutorial-on-getting-started-with-smart-contracts-on-ethereum-3ee6c54e84db)
+- [Learn Ethereum](https://ethereum.network/learn)
 - [The Hitchhiker’s Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
 - [Programming Ethereum smart contract transactions in JavaScript](https://tokenmarket.net/blog/creating-ethereum-smart-contract-transactions-in-client-side-javascript/)
 - [Ethereum Virtual Machine Awesome List](https://github.com/pirapira/awesome-ethereum-virtual-machine)
