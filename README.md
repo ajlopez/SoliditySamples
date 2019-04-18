@@ -79,7 +79,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity CRUD- Epilogue](https://medium.com/robhitchens/solidity-crud-epilogue-e563e794fde)
 - [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
 - [Solidity Collections](https://github.com/ethereum/wiki/wiki/Solidity-Collections)
-- [Testing and Code Coverage of Solidity Smart Contracts](https://medium.com/edgefund/testing-and-code-coverage-of-solidity-smart-contracts-660cb6291701)
+- [Testing and Code Coverage of Solidity Smart Contracts](https://medium.com/edgefund/testing-and-code-coverage-of-solidity-smart-contracts-660cb6291701
 
 ## Contracts
 
@@ -135,6 +135,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Tips and Tricks for Adding Metamask to Your UI](https://hackernoon.com/tips-and-tricks-for-adding-metamask-to-your-ui-32728b437194)
 - [Dip Dapp Doe?—?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
 - [Introducing ZepKit: the easiest way to start your decentralized application](https://blog.zeppelinos.org/introducing-zepkit/)
+- [Designing the architecture for your Ethereum application](https://forum.zeppelin.solutions/t/designing-the-architecture-for-your-ethereum-application/534/1)
 
 ## Explorers
 
