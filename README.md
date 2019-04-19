@@ -80,6 +80,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Getting Loopy with Solidity](https://blog.b9lab.com/getting-loopy-with-solidity-1d51794622ad)
 - [Solidity Collections](https://github.com/ethereum/wiki/wiki/Solidity-Collections)
 - [Testing and Code Coverage of Solidity Smart Contracts](https://medium.com/edgefund/testing-and-code-coverage-of-solidity-smart-contracts-660cb6291701
+- [Which custom data structures do you use in Solidity?](https://forum.zeppelin.solutions/t/which-custom-data-structures-do-you-use-in-solidity/510)
 
 ## Contracts
 
