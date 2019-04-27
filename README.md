@@ -100,6 +100,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Dapp](https://dapp.tools/dapp/)
 - [Compiling and deploying Ethereum Smart Contracts with pure JavaScript](https://medium.com/coinmonks/compiling-and-deploying-ethereum-smart-contracts-with-pure-javascript-4bee3bfe99bb)
 - [Crypto Wars](https://github.com/e11-io/crypto-wars-solidity)
+- [Parity’s Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
 
 ## Geth
 
@@ -153,6 +154,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Based Tokens](https://theethereum.wiki/w/index.php/Ethereum_Based_Tokens)
 - [Ethereum smart service payment with tokens](https://medium.com/@jgm.orinoco/ethereum-smart-service-payment-with-tokens-60894a79f75c)
 - [How To Write A Smart-Contract For Your ICO? An Ultimate guide](https://howtotoken.com/ico/how-to-write-a-smart-contract-for-your-ico-an-ultimate-guide/)
+- [The Innards of an ERC20 Token](https://hackernoon.com/the-innards-of-an-erc20-token-587c29e9b8a1)
 
 ## CryptoKitties
 
