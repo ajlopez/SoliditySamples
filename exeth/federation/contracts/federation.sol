@@ -2,15 +2,15 @@
 contract Federation {
     address[] federators;
 	
-    function Federation(address[] feds) public {
+    constructor(address[] memory feds) public {
         federators = feds;
     }
 	
-	function federationSize() constant public returns (uint) {
+	function federationSize() public view returns (uint) {
 		return federators.length;
 	}
 	
-	function isFederator(address addr) constant public returns(bool) {
+	function isFederator(address addr) public view returns(bool) {
 		for (uint16 k; k < federators.length; k++)
 			if (addr == federators[k])
 				return true;

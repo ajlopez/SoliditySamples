@@ -2,12 +2,12 @@
 contract Message {
     string public message;
 
-    constructor(string msg) public {
-        message = msg;
+    constructor(string memory _message) public {
+        message = _message;
     }
     
-    function setMessage(string msg) public {
-        message = msg;
+    function setMessage(string memory _message) public {
+        message = _message;
     }
 }
 

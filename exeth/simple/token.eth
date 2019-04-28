@@ -9,7 +9,7 @@ message "compiling token.sol"
 compile "./contracts/token.sol"
 message "token.sol compiled"
 
-dump contracts.Token.functionHashes
+dump contracts.Token.evm.methodIdentifiers
 
 deploy Token token1
 

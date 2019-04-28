@@ -1,6 +1,4 @@
 
-pragma solidity ^0.4.24;
-
 contract Throw {
     modifier sentValue() {
         require(msg.value > 0);

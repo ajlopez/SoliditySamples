@@ -11,7 +11,7 @@ message "compiling contract..."
 compile "./contracts/bet.sol"
 
 message "contract function hashes"
-dump contracts.Bet.functionHashes
+dump contracts.Bet.evm.methodIdentifiers
 
 deploy Bet bet
 

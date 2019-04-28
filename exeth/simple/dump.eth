@@ -4,7 +4,7 @@ compile "./contracts/empty.sol"
 message "empty.sol compiled"
 
 message "Empty functions"
-dump contracts.Empty.functionHashes
+dump contracts.Empty.evm.methodIdentifiers
 
 message
 
@@ -14,17 +14,17 @@ message "counter.sol compiled"
 
 # assertions
 assert contracts.Counter
-assert contracts.Counter.interface
-assert contracts.Counter.bytecode
-assert contracts.Counter.runtimeBytecode
+assert contracts.Counter.abi
+assert contracts.Counter.evm.bytecode
+assert contracts.Counter.evm.deployedBytecode
 
 message "Counter functions"
-dump contracts.Counter.functionHashes
+dump contracts.Counter.evm.methodIdentifiers
 
 message "Counter interface"
-dump contracts.Counter.interface
+dump contracts.Counter.abi
 
 message "Counter bytecodes"
-dump contracts.Counter.bytecode
+dump contracts.Counter.evm.bytecode.object
 
 

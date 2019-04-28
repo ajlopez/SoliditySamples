@@ -11,7 +11,7 @@ message "compiling contract..."
 compile "./contracts/federation.sol"
 
 message "contract function hashes"
-dump contracts.Federation.functionHashes
+dump contracts.Federation.evm.methodIdentifiers
 
 # deploy contract with three accounts
 

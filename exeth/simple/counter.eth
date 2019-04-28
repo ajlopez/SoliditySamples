@@ -9,9 +9,10 @@ accounts
 
 message "compiling contract..."
 compile "./contracts/counter.sol"
+message "counter.sol compiled"
 
-message "contract function hashes"
-dump contracts.Counter.functionHashes
+message "functions"
+dump contracts.Counter.evm.methodIdentifiers
 
 # deploy instances, using default sender: accounts[0], message default result: 0
 # first argument: contract name

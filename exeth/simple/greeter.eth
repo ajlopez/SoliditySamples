@@ -9,8 +9,8 @@ message "compiling greeter.sol"
 compile "./contracts/greeter.sol"
 message "greeter.sol compiled"
 
-# dump contracts.Greeter.functionHashes
-# dump contracts.Greeter.interface
+dump contracts.Greeter.evm.methodIdentifiers
+dump contracts.Greeter.abi
 
 deploy Greeter greeter1
 

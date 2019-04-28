@@ -2,11 +2,11 @@
 contract Greeter {
     string public message;
 
-    function Greeter() {
+    constructor() public {
         message = "Hello, Contract";
     }
     
-    function setMessage(string msg) {
+    function setMessage(string memory msg) public {
         message = msg;
     }
 }
