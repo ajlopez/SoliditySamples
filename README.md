@@ -81,6 +81,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity Collections](https://github.com/ethereum/wiki/wiki/Solidity-Collections)
 - [Testing and Code Coverage of Solidity Smart Contracts](https://medium.com/edgefund/testing-and-code-coverage-of-solidity-smart-contracts-660cb6291701
 - [Which custom data structures do you use in Solidity?](https://forum.zeppelin.solutions/t/which-custom-data-structures-do-you-use-in-solidity/510)
+- [Ethernaut Lvl 0 Walkthrough: ABIs, Web3, and how to abuse them](https://hackernoon.com/ethernaut-lvl-0-walkthrough-abis-web3-and-how-to-abuse-them-d92a8842d71b)
 
 ## Contracts
 
