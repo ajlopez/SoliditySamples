@@ -53,6 +53,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [EVM Evolution Roadmap](https://medium.com/spadebuilders/evm-evolution-roadmap-f8b8e3a73882)
 - [Ethereum Yellow Paper Walkthrough: Merkle Trees](https://dzone.com/articles/ethereum-yellow-paper-walkthrough-27)
 - [Role Based Access Control for the Ethereum Blockchain](https://hackernoon.com/role-based-access-control-for-the-ethereum-blockchain-bcc9dfbcfe5c)
+- [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 
 ## Solidity
 
