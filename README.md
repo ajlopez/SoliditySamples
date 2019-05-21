@@ -54,6 +54,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Yellow Paper Walkthrough: Merkle Trees](https://dzone.com/articles/ethereum-yellow-paper-walkthrough-27)
 - [Role Based Access Control for the Ethereum Blockchain](https://hackernoon.com/role-based-access-control-for-the-ethereum-blockchain-bcc9dfbcfe5c)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
+- [A guide to Ethereum’s ERC standards](https://news.yahoo.com/guide-ethereum-erc-standards-150024381.html)
 
 ## Solidity
 
