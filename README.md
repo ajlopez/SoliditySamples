@@ -18,6 +18,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 ## Ethereum
 
 - [The Complete Tutorial On Getting Started With Smart Contracts On Ethereum](https://medium.com/@ricochenx/the-complete-tutorial-on-getting-started-with-smart-contracts-on-ethereum-3ee6c54e84db)
+- [What is Ethereum?](https://medium.com/on-the-block/what-is-ethereum-fb6b7c33e21d)
 - [Learn Ethereum](https://ethereum.network/learn)
 - [The Hitchhiker’s Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
 - [Programming Ethereum smart contract transactions in JavaScript](https://tokenmarket.net/blog/creating-ethereum-smart-contract-transactions-in-client-side-javascript/)
@@ -86,6 +87,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Which custom data structures do you use in Solidity?](https://forum.zeppelin.solutions/t/which-custom-data-structures-do-you-use-in-solidity/510)
 - [Ethernaut Lvl 0 Walkthrough: ABIs, Web3, and how to abuse them](https://hackernoon.com/ethernaut-lvl-0-walkthrough-abis-web3-and-how-to-abuse-them-d92a8842d71b)
 - [Deconstructing a Solidity Contract — Part II: Creation vs. Runtime](https://forum.zeppelin.solutions/t/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime/679)
+- [Solidity for Beginners](https://medium.com/swlh/solidity-for-beginners-9b8cb5cb4620)
 
 ## Contracts
 
