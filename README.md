@@ -137,6 +137,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Introduction to the Truffle Suite and Dapp Development Pipeline](https://medium.com/@rossbulat/introduction-to-the-truffle-suite-and-dapp-development-pipeline-1b33bb8228d4)
 - [Test Driven Solidity with Truffle](https://medium.com/@yahya_gis/test-driven-solidity-with-truffle-e4beaa2bd194)
 - [Solidity and TDD - How to build a smart contract](https://ilanolkies.com/post/Solidity-and-TDD)
+- [Managing Ethereum Smart Contract Events with Drizzle](https://medium.com/truffle-suite/managing-ethereum-smart-contract-events-with-drizzle-58f3f9afbdad)
+- [Getting Started with Drizzle and React](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react)
 
 ## Dapps
 
@@ -145,6 +147,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Dip Dapp Doe?—?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
 - [Introducing ZepKit: the easiest way to start your decentralized application](https://blog.zeppelinos.org/introducing-zepkit/)
 - [Designing the architecture for your Ethereum application](https://forum.zeppelin.solutions/t/designing-the-architecture-for-your-ethereum-application/534/1)
+- [DApp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 
 ## Explorers
 
