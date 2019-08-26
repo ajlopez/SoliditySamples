@@ -1,6 +1,8 @@
 
 contract Federation {
     address[] federators;
+    
+    event NewFederator(address federator);
 	
     constructor(address[] memory feds) public {
         federators = feds;
@@ -24,6 +26,8 @@ contract Federation {
 			
 		federators.push(addr);
 		
+        emit NewFederator(addr);
+        
 		return true;
 	}
 }
