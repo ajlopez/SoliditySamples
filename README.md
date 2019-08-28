@@ -56,6 +56,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Role Based Access Control for the Ethereum Blockchain](https://hackernoon.com/role-based-access-control-for-the-ethereum-blockchain-bcc9dfbcfe5c)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 - [A guide to Ethereum’s ERC standards](https://news.yahoo.com/guide-ethereum-erc-standards-150024381.html)
+- [Diving into Ethereum’s world state](https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed)
 
 ## Solidity
 
@@ -139,6 +140,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity and TDD - How to build a smart contract](https://ilanolkies.com/post/Solidity-and-TDD)
 - [Managing Ethereum Smart Contract Events with Drizzle](https://medium.com/truffle-suite/managing-ethereum-smart-contract-events-with-drizzle-58f3f9afbdad)
 - [Getting Started with Drizzle and React](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react)
+- [Handy helper functions for Solidity Development with Truffle](https://medium.com/@contacttomnash/handy-helper-functions-for-solidity-development-with-truffle-39d14a371c12)
 
 ## Dapps
 
