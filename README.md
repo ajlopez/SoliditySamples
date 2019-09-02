@@ -109,6 +109,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Compiling and deploying Ethereum Smart Contracts with pure JavaScript](https://medium.com/coinmonks/compiling-and-deploying-ethereum-smart-contracts-with-pure-javascript-4bee3bfe99bb)
 - [Crypto Wars](https://github.com/e11-io/crypto-wars-solidity)
 - [Parity’s Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
+- [A simple blockchain application for data verification](https://hackernoon.com/a-simple-blockchain-application-for-data-verification-c288a64e0d24)
+
 
 ## Geth
 
