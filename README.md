@@ -91,6 +91,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity for Beginners](https://medium.com/swlh/solidity-for-beginners-9b8cb5cb4620)
 - [“Stack Too Deep”- Error in Solidity](https://medium.com/coinmonks/stack-too-deep-error-in-solidity-608d1bd6a1ea)
 - [Better Solidity debugging: stack traces are finally here](https://medium.com/nomic-labs-blog/better-solidity-debugging-stack-traces-are-finally-here-dd80a56f92bb)
+- [Fixed point math in Solidity](https://medium.com/cementdao/fixed-point-math-in-solidity-616f4508c6e8)
 
 ## Contracts
 
