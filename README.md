@@ -39,6 +39,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Data structure in Ethereum | Episode 2: Radix trie and Merkle trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-2-radix-trie-and-merkle-trie-d941d0bfd69a)
 - [Data structure in Ethereum | Episode 3: Patricia trie](https://medium.com/coinmonks/data-structure-in-ethereum-episode-3-patricia-trie-b7b0ccddd32f)
 - [Data structure in Ethereum | Episode 4: Diving into examples](https://medium.com/coinmonks/data-structure-in-ethereum-episode-4-diving-by-examples-f6a4cbd8c329)
+- [Skewed Merkle Trees](https://medium.com/codechain/skewed-merkle-tree-259b984acc0c)
 - [Ethereum 69: how to set up a fully synced blockchain node in 10 mins](https://medium.freecodecamp.org/ethereum-69-how-to-set-up-a-fully-synced-blockchain-node-in-10-mins-f6318d7aad40)
 - [State Channels for Dummies: Part 5](https://medium.com/blockchannel/state-channels-for-dummies-part-5-6238f83f8da3)
 - [Ethereum Explained: Merkle Trees, World State, Transactions, and More](https://pegasys.tech/ethereum-explained-merkle-trees-world-state-transactions-and-more/)
@@ -57,6 +58,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 - [A guide to Ethereum’s ERC standards](https://news.yahoo.com/guide-ethereum-erc-standards-150024381.html)
 - [Diving into Ethereum’s world state](https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed)
+- [The Ethereum Virtual Machine (EVM) Runtime Environment](https://medium.com/0xcode/the-ethereum-virtual-machine-evm-runtime-environment-d7969544d3dd)
 
 ## Solidity
 
@@ -112,7 +114,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Crypto Wars](https://github.com/e11-io/crypto-wars-solidity)
 - [Parity’s Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
 - [A simple blockchain application for data verification](https://hackernoon.com/a-simple-blockchain-application-for-data-verification-c288a64e0d24)
-
+- [Smart contract vs “token”-based systems](https://medium.com/symbiont-io/smart-contract-vs-token-based-systems-ccdd99af41e3)
 
 ## Geth
 
