@@ -60,7 +60,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Diving into Ethereum’s world state](https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed)
 - [The Ethereum Virtual Machine (EVM) Runtime Environment](https://medium.com/0xcode/the-ethereum-virtual-machine-evm-runtime-environment-d7969544d3dd)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
-
+- [Mastering The Fundamentals of Ethereum (For New Blockchain Devs) Part III — Wallets, Keys, And Accounts](https://medium.com/@markmuskardin/mastering-the-fundamentals-of-ethereum-for-new-blockchain-devs-part-iii-wallets-keys-and-4cd3175b535b)
 
 ## Solidity
 
