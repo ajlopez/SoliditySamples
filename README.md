@@ -62,6 +62,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
 - [Mastering The Fundamentals of Ethereum (For New Blockchain Devs) Part III — Wallets, Keys, And Accounts](https://medium.com/@markmuskardin/mastering-the-fundamentals-of-ethereum-for-new-blockchain-devs-part-iii-wallets-keys-and-4cd3175b535b)
 - [Ethereum Development Crash Course Part One](https://medium.com/bitfwd/ethereum-development-crash-course-part-one-327dee16878b)
+- [Data Convergence — Blockchain — Blockchain Developer Tools](https://medium.com/data-convergence/data-convergence-blockchain-blockchain-developer-tools-8c9e98852251)
 
 ## Solidity
 
