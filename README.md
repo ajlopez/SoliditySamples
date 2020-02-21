@@ -101,6 +101,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Solidity Library for Array of Type Address](https://medium.com/51nodes/solidity-library-for-array-of-type-address-e40c36784ab2)
 - [`external` vs `public` best practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 - [Solidity 0.6: You Might Be Sending Ether Incorrectly](https://medium.com/better-programming/solidity-0-6-you-might-be-sending-ether-all-wrong-1e119e1ffc27)
+- [Introduction into Mutation Testing](https://medium.com/swlh/introduction-into-mutation-testing-d6512dc702b0)
 
 ## Contracts
 
