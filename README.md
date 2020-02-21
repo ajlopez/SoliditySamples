@@ -124,6 +124,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Parity’s Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
 - [A simple blockchain application for data verification](https://hackernoon.com/a-simple-blockchain-application-for-data-verification-c288a64e0d24)
 - [Smart contract vs “token”-based systems](https://medium.com/symbiont-io/smart-contract-vs-token-based-systems-ccdd99af41e3)
+- [Smart Contract Explained by Demonstration](https://medium.com/coinmonks/smart-contract-explained-by-demonstration-93b06e938474)
 
 ## Geth
 
