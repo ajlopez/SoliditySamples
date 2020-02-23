@@ -125,6 +125,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [A simple blockchain application for data verification](https://hackernoon.com/a-simple-blockchain-application-for-data-verification-c288a64e0d24)
 - [Smart contract vs “token”-based systems](https://medium.com/symbiont-io/smart-contract-vs-token-based-systems-ccdd99af41e3)
 - [Smart Contract Explained by Demonstration](https://medium.com/coinmonks/smart-contract-explained-by-demonstration-93b06e938474)
+- [How to write a simple token contract in Solidity](https://medium.com/datadriveninvestor/writing-a-simple-token-contract-in-solidity-1c457ab25b1a)
 
 ## Geth
 
