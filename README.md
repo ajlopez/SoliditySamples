@@ -102,6 +102,8 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [`external` vs `public` best practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 - [Solidity 0.6: You Might Be Sending Ether Incorrectly](https://medium.com/better-programming/solidity-0-6-you-might-be-sending-ether-all-wrong-1e119e1ffc27)
 - [Introduction into Mutation Testing](https://medium.com/swlh/introduction-into-mutation-testing-d6512dc702b0)
+- [Math in Solidity (Part 5: Exponent and Logarithm)](https://medium.com/coinmonks/math-in-solidity-part-5-exponent-and-logarithm-9aef8515136e)
+- [A brief analysis of the new try/catch functionality in Solidity 0.6](https://forum.openzeppelin.com/t/a-brief-analysis-of-the-new-try-catch-functionality-in-solidity-0-6/2564)
 
 ## Contracts
 
