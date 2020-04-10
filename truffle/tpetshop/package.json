@@ -7,12 +7,17 @@
     "test": "test"
   },
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "minimist": "^1.2.5",
     "lite-server": "^2.3.0"
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
   }
 }
