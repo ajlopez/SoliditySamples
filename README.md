@@ -160,6 +160,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Managing Ethereum Smart Contract Events with Drizzle](https://medium.com/truffle-suite/managing-ethereum-smart-contract-events-with-drizzle-58f3f9afbdad)
 - [Getting Started with Drizzle and React](https://www.trufflesuite.com/tutorials/getting-started-with-drizzle-and-react)
 - [Handy helper functions for Solidity Development with Truffle](https://medium.com/@contacttomnash/handy-helper-functions-for-solidity-development-with-truffle-39d14a371c12)
+- [How to Write Complex Truffle Migrations](https://medium.com/better-programming/how-to-write-complex-truffle-migrations-86d4b85d7783)
 
 ## Dapps
 
