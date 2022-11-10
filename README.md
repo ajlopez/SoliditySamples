@@ -20,7 +20,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [The Complete Tutorial On Getting Started With Smart Contracts On Ethereum](https://medium.com/@ricochenx/the-complete-tutorial-on-getting-started-with-smart-contracts-on-ethereum-3ee6c54e84db)
 - [What is Ethereum?](https://medium.com/on-the-block/what-is-ethereum-fb6b7c33e21d)
 - [Learn Ethereum](https://ethereum.network/learn)
-- [The Hitchhikerís Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
+- [The Hitchhiker‚Äôs Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
 - [Programming Ethereum smart contract transactions in JavaScript](https://tokenmarket.net/blog/creating-ethereum-smart-contract-transactions-in-client-side-javascript/)
 - [Ethereum Virtual Machine Awesome List](https://github.com/pirapira/awesome-ethereum-virtual-machine)
 - [A curated list of awesome Ethereum Resources](http://awesome-ethereum.com/)
@@ -50,19 +50,19 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Ethereum Under The Hood Part 3 (RLP Decoding)](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-c0c07f5c0714)
 - [A Guide to Gas](https://media.consensys.net/a-guide-to-gas-12b40d03605d)
 - [A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974)
-- [Ethereumís EIP 2/4: 15 Second Block Target](https://blog.cotten.io/ethereums-eip-2-4-15-second-block-target-98d4c11017e1)
+- [Ethereum‚Äôs EIP 2/4: 15 Second Block Target](https://blog.cotten.io/ethereums-eip-2-4-15-second-block-target-98d4c11017e1)
 - [The business of sending transactions on Ethereum](https://medium.com/coinmonks/the-business-of-sending-transactions-on-ethereum-e79fd9a2b88)
 - [EVM Evolution Roadmap](https://medium.com/spadebuilders/evm-evolution-roadmap-f8b8e3a73882)
 - [Ethereum Yellow Paper Walkthrough: Merkle Trees](https://dzone.com/articles/ethereum-yellow-paper-walkthrough-27)
 - [Role Based Access Control for the Ethereum Blockchain](https://hackernoon.com/role-based-access-control-for-the-ethereum-blockchain-bcc9dfbcfe5c)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
-- [A guide to Ethereumís ERC standards](https://news.yahoo.com/guide-ethereum-erc-standards-150024381.html)
-- [Diving into Ethereumís world state](https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed)
+- [A guide to Ethereum‚Äôs ERC standards](https://news.yahoo.com/guide-ethereum-erc-standards-150024381.html)
+- [Diving into Ethereum‚Äôs world state](https://medium.com/cybermiles/diving-into-ethereums-world-state-c893102030ed)
 - [The Ethereum Virtual Machine (EVM) Runtime Environment](https://medium.com/0xcode/the-ethereum-virtual-machine-evm-runtime-environment-d7969544d3dd)
 - [How does Ethereum work, anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
-- [Mastering The Fundamentals of Ethereum (For New Blockchain Devs) Part III ó Wallets, Keys, And Accounts](https://medium.com/@markmuskardin/mastering-the-fundamentals-of-ethereum-for-new-blockchain-devs-part-iii-wallets-keys-and-4cd3175b535b)
+- [Mastering The Fundamentals of Ethereum (For New Blockchain Devs) Part III ‚Äî Wallets, Keys, And Accounts](https://medium.com/@markmuskardin/mastering-the-fundamentals-of-ethereum-for-new-blockchain-devs-part-iii-wallets-keys-and-4cd3175b535b)
 - [Ethereum Development Crash Course Part One](https://medium.com/bitfwd/ethereum-development-crash-course-part-one-327dee16878b)
-- [Data Convergence ó Blockchain ó Blockchain Developer Tools](https://medium.com/data-convergence/data-convergence-blockchain-blockchain-developer-tools-8c9e98852251)
+- [Data Convergence ‚Äî Blockchain ‚Äî Blockchain Developer Tools](https://medium.com/data-convergence/data-convergence-blockchain-blockchain-developer-tools-8c9e98852251)
 
 ## Solidity
 
@@ -93,9 +93,9 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Testing and Code Coverage of Solidity Smart Contracts](https://medium.com/edgefund/testing-and-code-coverage-of-solidity-smart-contracts-660cb6291701
 - [Which custom data structures do you use in Solidity?](https://forum.zeppelin.solutions/t/which-custom-data-structures-do-you-use-in-solidity/510)
 - [Ethernaut Lvl 0 Walkthrough: ABIs, Web3, and how to abuse them](https://hackernoon.com/ethernaut-lvl-0-walkthrough-abis-web3-and-how-to-abuse-them-d92a8842d71b)
-- [Deconstructing a Solidity Contract ó Part II: Creation vs. Runtime](https://forum.zeppelin.solutions/t/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime/679)
+- [Deconstructing a Solidity Contract ‚Äî Part II: Creation vs. Runtime](https://forum.zeppelin.solutions/t/deconstructing-a-solidity-contract-part-ii-creation-vs-runtime/679)
 - [Solidity for Beginners](https://medium.com/swlh/solidity-for-beginners-9b8cb5cb4620)
-- [ìStack Too Deepî- Error in Solidity](https://medium.com/coinmonks/stack-too-deep-error-in-solidity-608d1bd6a1ea)
+- [‚ÄúStack Too Deep‚Äù- Error in Solidity](https://medium.com/coinmonks/stack-too-deep-error-in-solidity-608d1bd6a1ea)
 - [Better Solidity debugging: stack traces are finally here](https://medium.com/nomic-labs-blog/better-solidity-debugging-stack-traces-are-finally-here-dd80a56f92bb)
 - [Fixed point math in Solidity](https://medium.com/cementdao/fixed-point-math-in-solidity-616f4508c6e8)
 - [Solidity Library for Array of Type Address](https://medium.com/51nodes/solidity-library-for-array-of-type-address-e40c36784ab2)
@@ -118,16 +118,17 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Creating Smart Contracts with Smart Contract](https://medium.com/coinmonks/creating-smart-contracts-with-smart-contract-d54e21d26e00)
 - [How to Write Upgradeable Smart Contracts with Truffle 5.0 and ZeppelinOS 2.0](https://paulrberg.com/post/2018/12/30/upgradeable-smart-contracts/)
 - [zepcon0 - ZeppelinOS - Upgradeability by Elena Nadolinski](https://www.youtube.com/watch?v=FzmzUHLiutg)
-- [Smart Contracts: A Simple Guide ó Part 1](https://medium.com/@ShapeShift.io/smart-contracts-a-simple-guide-part-1-fa16a6c201c1)
+- [Smart Contracts: A Simple Guide ‚Äî Part 1](https://medium.com/@ShapeShift.io/smart-contracts-a-simple-guide-part-1-fa16a6c201c1)
 - [Writing Smart Contracts with Solidity > 0.5](https://medium.com/@rossbulat/writing-solidity-0-5-smart-contracts-101-5efd1ee9f53e)
 - [Dapp](https://dapp.tools/dapp/)
 - [Compiling and deploying Ethereum Smart Contracts with pure JavaScript](https://medium.com/coinmonks/compiling-and-deploying-ethereum-smart-contracts-with-pure-javascript-4bee3bfe99bb)
 - [Crypto Wars](https://github.com/e11-io/crypto-wars-solidity)
-- [Parityís Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
+- [Parity‚Äôs Checklist for Secure Smart Contract Development](https://www.parity.io/paritys-checklist-for-secure-smart-contract-development/)
 - [A simple blockchain application for data verification](https://hackernoon.com/a-simple-blockchain-application-for-data-verification-c288a64e0d24)
-- [Smart contract vs ìtokenî-based systems](https://medium.com/symbiont-io/smart-contract-vs-token-based-systems-ccdd99af41e3)
+- [Smart contract vs ‚Äútoken‚Äù-based systems](https://medium.com/symbiont-io/smart-contract-vs-token-based-systems-ccdd99af41e3)
 - [Smart Contract Explained by Demonstration](https://medium.com/coinmonks/smart-contract-explained-by-demonstration-93b06e938474)
 - [How to write a simple token contract in Solidity](https://medium.com/datadriveninvestor/writing-a-simple-token-contract-in-solidity-1c457ab25b1a)
+- [Hello World | basic smart contract tutorial](https://docs.alchemy.com/docs/hello-world-smart-contract)
 
 ## Geth
 
@@ -166,7 +167,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 - [Dapps for Beginners](https://dappsforbeginners.wordpress.com)
 - [Tips and Tricks for Adding Metamask to Your UI](https://hackernoon.com/tips-and-tricks-for-adding-metamask-to-your-ui-32728b437194)
-- [Dip Dapp Doe?ó?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
+- [Dip Dapp Doe?‚Äî?Anatomy of an Ethereum distributed fair game (part 1)](https://hackernoon.com/dip-dapp-doe-anatomy-of-an-ethereum-distributed-fair-game-part-1-5ee78980e360)
 - [Introducing ZepKit: the easiest way to start your decentralized application](https://blog.zeppelinos.org/introducing-zepkit/)
 - [Designing the architecture for your Ethereum application](https://forum.zeppelin.solutions/t/designing-the-architecture-for-your-ethereum-application/534/1)
 - [DApp Development for Python Programmers](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
@@ -177,7 +178,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 
 ## Tokens
 
-- [What is An Ethereum Token: The Ultimate Beginnerís Guide](https://blockgeeks.com/guides/ethereum-token/)
+- [What is An Ethereum Token: The Ultimate Beginner‚Äôs Guide](https://blockgeeks.com/guides/ethereum-token/)
 - [ERC20 Token Standard](https://theethereum.wiki/w/index.php/ERC20_Token_Standard)
 - [ERC20 Token Standard: A Beginners Guide](https://medium.com/cryptoxtech/erc20-token-standard-a-beginners-guide-5b5f0c87e11f)
 - [ERC20](https://en.wikipedia.org/wiki/ERC20)
@@ -200,7 +201,7 @@ Solidity programming language samples, smart contracts for Ethereum.
 - [Code From EtherScan](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#code)
 - [The Inside Story of the CryptoKitties Congestion Crisis](https://media.consensys.net/the-inside-story-of-the-cryptokitties-congestion-crisis-499b35d119cc)
 - [Hacking the CryptoKitties Genome](https://hackernoon.com/hacking-the-cryptokitties-genome-1cb3e7dddab3)
-- [CryptoKitties, Explained Ö Mostly](https://medium.com/the-new-york-times/cryptokitties-explained-mostly-d56d70024f36)
+- [CryptoKitties, Explained ‚Ä¶ Mostly](https://medium.com/the-new-york-times/cryptokitties-explained-mostly-d56d70024f36)
 
 ## Zeppelin
 
